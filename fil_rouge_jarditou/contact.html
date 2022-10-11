@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Jarditou
+        </title>
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+        <header>
+            <img src="assets/images/jarditou_logo.jpg" title="logo jarditou" alt="logo jarditou" width="350" height="100"> 
+            <p id="para">
+                Tout le jardin
+            </p>
+        </header>
+        <nav class="menu">
+            <a href="index.html"> 
+                Accueil
+            </a>
+            <a href="tableau.html">
+                Tableau   
+            </a>
+            <a href="contact.html">
+                Contact
+            </a>
+        </nav>
+        <section id="image">
+            <img src="assets/images/promotion.jpg" title="promotion" alt="promotion" width="100%" height="320">
+        </section>
+        <section id="article">
+        <article>
+        <h3>
+            <b>
+                Contact
+            </b>
+        </h3>
+        <p>
+            * Ces zones sont obligatoires
+        </p>
+        <form action="http://bienvenu.net/script.php" method="post">
+            <fieldset>
+                <legend>
+                    Vos coordonnées
+                </legend>
+                <label for="name">
+                    Nom*:
+                </label>
+                <input type="text" name="nom">
+                <br>
+                <label for="name">
+                    Prenom*:
+                </label>
+                <input type="text" name="prenom">
+                <br>
+                <label for="sexe">
+                    Sexe*:
+                </label>
+                <input type="radio" nam Contae="sexe" value="Féminin">Féminin
+                <input type="radio" name="sexe" value="Masculin">Masculin
+                <br>
+                <label for="date">
+                    Date de naissance*:
+                </label>
+                <input type="date" name="date" id="date">
+                <br>
+                <label for="code">
+                    Code postal*:
+                </label>
+                <input type="text" name="code" id="code">
+                <br>
+                <label for="adresse">
+                    Adresse:
+                </label>
+                <input type="text" name="adresse" id="adresse">
+                <br>
+                <label for="ville">
+                    Ville:
+                </label>
+                <input type="text" name="ville" id="ville">
+                <br>
+                <label for="email">
+                    Email*:
+                </label>
+                <input type="email" name="email" id="email">
+            </fieldset>
+            <fieldset>
+                <legend>
+                    Votre demande
+                </legend>
+                <label for="sujet">
+                    Sujet*:
+                </label>
+                <select name="sujet" size="1" id="sujet">
+                    <option>
+                        Veuillez séléctionner un sujet
+                    </option>
+                    <option selected>
+                         Mes commande
+                    </option>
+                    <option selected>
+                        Question sur un produit                       
+                    </option>
+                    <option selected>
+                        Réclamation
+                    </option>
+                    <option selected>
+                        Autres
+                    </option>
+                 </select>
+                 <br>
+                <label for="question">
+                    Votre question*:
+                </label>
+                <textarea name="question"></textarea>
+            </fieldset>
+            <input type="checkbox" name="condition" id="condition">* J'accepte le traitement information de ce formulaire
+            <br>
+            <input type="button" value="Envoyer">
+            <input type="button" value="Annuler">
+        </form>
+        </article>
+        <aside id="rectangle"></aside>
+        </section>
+        <footer>
+            <p>
+                Mention légales
+            </p>
+            <p>
+                Horaires 
+            </p>
+            <p>
+                Plan du site
+            </p>
+        </footer>
+    </body>
+</html>

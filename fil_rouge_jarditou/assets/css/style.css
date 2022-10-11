@@ -1,0 +1,75 @@
+
+header{
+    display: flex;
+}
+nav {
+    display: flex;
+    padding: 20px;
+    width: auto;
+    height: auto;
+    background-color: black;
+}
+nav a{
+    display: flex;
+    color: white;
+    margin-right: 1%;
+}
+footer{
+    display: flex;
+    background-color: black;
+    padding: 10px;
+        
+ }
+footer p{
+    color: white;
+    margin-right: 0.5%;
+    text-decoration: underline;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+#para{
+    margin: auto;
+    font-size: 30px;
+}
+#article{
+    padding: 30px;
+    display: flex;
+}
+#image{
+    padding: 10px;
+}
+/*c'est le rectangle des contact et l'accueil*/
+#rectangle{
+    width: 30%; ;
+    height: 500px;
+    background-color: grey;
+ }
+article{
+    width: 70%;
+}
+/*c'est le rectangle du tableau*/
+#rectangle1{
+    width: 40%; ;
+    max-width: 1350px;
+    background-color: gray;
+}
+form{
+    width: 30%;
+}
+
+@media screen and (max-width: 768px) {
+   #rectangle{
+    width: 0%;
+   }
+   #rectangle1{
+    width: 0%; ;
+   }
+   nav{
+    flex-direction: column;
+   }
+   article{
+    font-size: 15px;
+   }
+}

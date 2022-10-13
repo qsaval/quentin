@@ -33,17 +33,24 @@ function RechercheTab(tab,n){
 
 function InfoTab(tab){
     var a;
+    var b=0;
     var c=0;
-    var d;
+    var d=0;
     var e;
     var g=[];
     a=tab.length;
     for(var i=0;i<=a-2;i++){
-        if(tab[i]<tab[i+1]){
+        if(tab[i]<=tab[i+1]){
             c=tab[i+1];
+            if(b<c){
+                b=c;
+            }
         }
         else{
             c=tab[i];
+            if(b<c){
+                b=c;
+            }
         }
     }
     for(var f=0;f<=a-1;f++){

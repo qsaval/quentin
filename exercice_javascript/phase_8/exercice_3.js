@@ -1,12 +1,12 @@
-var a= parseInt();
+var a= window.prompt();
 var b= 4;
 var c=1;
 var d;
 while(b!=0){
-    b=parseInt();
+    b=window.prompt;
     a=a+b;
     c=c+1;
 }
-prompt(a);
+document.write(a);
 d=a/c;
-prompt(d);
+document.write(d);

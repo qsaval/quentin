@@ -36,7 +36,7 @@ function InfoTab(tab){
     var b=0;
     var c=0;
     var d=0;
-    var e;
+    var f=0;
     var g=[];
     a=tab.length;
     for(var i=0;i<=a-2;i++){
@@ -53,11 +53,10 @@ function InfoTab(tab){
             }
         }
     }
-    for(var f=0;f<=a-1;f++){
-        d=d+tab[f];
+    while(f<a){
+        d=d+tab[f++];
     }
-    e=d/a;
-    g=[c,e];
+    g=[c,d/a];
     return g;
 }
 

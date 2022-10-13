@@ -1,7 +1,7 @@
-var a = parseInt ();
+var a = window.prompt();
 if(a % 2 == 0){
-    prompt("nombre est pair")
+    document.write("nombre est pair");
 }
 else{
-    prompt("nombre est impair")
+    document.write("nombre est impair");
 }

@@ -1,6 +1,6 @@
-var a = parseInt(prompt("saisir un nombre entier"));
-var b = parseInt(prompt("saisir un nombre entier"));
-var c = parseInt(prompt("saisir une opération"));
+var a = window.prompt("saisir un nombre entier");
+var b = window.prompt("saisir un nombre entier");
+var c = window.prompt("saisir une opération");
 var d;
 switch (c) {
     case "+":
@@ -12,7 +12,7 @@ switch (c) {
         break
     case "*":
         if(a==0||b==0){
-            prompt("erreur");
+            window.alert("erreur");
         }
         else{
             d=a*b;
@@ -20,13 +20,13 @@ switch (c) {
         break
     case "/":
         if(b==0){
-            prompt("erreur");
+            window.alert("erreur");
         }
         else{
             d=a/b;
         }
         break
     default:
-        prompt("erreur");
+        window.alert("erreur");
 }
-prompt(a + c + b + "=" + d)
+document.write(a + c + b + "=" + d);

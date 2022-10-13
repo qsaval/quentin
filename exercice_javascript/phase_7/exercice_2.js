@@ -1,9 +1,9 @@
-var a= parseInt();
+var a= window.prompt();
 var b;
 b=2022/a;
 if(b>=18){
-    prompt("ton age est " + b + " et tu est majeur");
+    document.write("ton age est " + b + " et tu est majeur");
 }
 else{
-    prompt("ton age est " + b + " et tu est mineur");
+    document.write("ton age est " + b + " et tu est mineur");
 }

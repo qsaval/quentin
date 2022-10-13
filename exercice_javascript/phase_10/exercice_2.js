@@ -8,10 +8,8 @@ function InitTab(){
     a=window.prompt("taille du tableau");
     return a;
 }
-function SaisirTab(tab){
-    var a;
-    a=tab.length;
-    for(var i=0;i<=a-1;i++){
+function SaisirTab(tab,n){
+    for(var i=0;i<=n-1;i++){
         tab[i]=window.prompt();
     }
     return tab;
@@ -34,6 +32,7 @@ function InfoTab(tab){
     var c;
     var d=0;
     var e;
+    var g;
     a=tab.length;
     for(var i=0;i<=a-2;i++){
         if(b[i]<b[i+1]){
@@ -47,6 +46,21 @@ function InfoTab(tab){
         d=d+b[i]
     }
     e=d/a
-    return c;
-    return e;
+    g=[c,e]
+    return g;
 }
+var a= GetInteger();
+var b=InitTab();
+var c=[];
+var d;
+var e;
+var f;
+var g;
+c=SaisirTab(c,b);
+d=RechercheTab(c,a);
+AffichTab(c);
+document.write(d);
+e=InfoTab(c);
+f=e[0];
+g=e[1];
+document.write("le maximum est "+ f +" la moyenne est "+g)

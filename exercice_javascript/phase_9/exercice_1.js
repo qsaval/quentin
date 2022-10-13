@@ -4,12 +4,12 @@ function produit(x,y){
     return a;
 }
 function afficheImg(image){
-    document.write("<img src= '" +image +"'");
+    document.write("<img src= '" +image +"'<br>");
 }
 var a= window.prompt("choisir un nombre");
 var b= window.prompt("choisir un nombre");
 var c;
 var d= "papillon.jpg";
 c= produit(a,b);
-document.write("le produit de "+a+" par "+b+ " egal "+c );
 afficheImg(d);
+document.write("le produit de "+a+" par "+b+ " egal "+c );

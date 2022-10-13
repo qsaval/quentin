@@ -4,11 +4,13 @@ function GetInteger(){
     return a;
 }
 
+
 function InitTab(){
     var a;
     a=window.prompt("taille du tableau");
     return a;
 }
+
 
 function SaisirTab(tab,n){
     for(var i=0;i<=n-1;i++){
@@ -21,6 +23,7 @@ function AffichTab(tab){
     document.write(tab);
 }
 
+
 function RechercheTab(tab,n){
     var a;
     a=tab.length;
@@ -31,12 +34,12 @@ function RechercheTab(tab,n){
     }
 }
 
+
 function InfoTab(tab){
     var a;
     var b=0;
     var c=0;
     var d=0;
-    var f=0;
     var g=[];
     a=tab.length;
     for(var i=0;i<=a-2;i++){
@@ -53,10 +56,10 @@ function InfoTab(tab){
             }
         }
     }
-    while(f<a){
-        d=d+tab[f++];
+    for(var f=0;f<=a-1;f++){
+        d=d+tab[f];
     }
-    g=[c,d/a];
+    g=[b,d/a];
     return g;
 }
 

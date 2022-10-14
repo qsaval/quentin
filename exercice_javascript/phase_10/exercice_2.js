@@ -41,6 +41,7 @@ function InfoTab(tab){
     var c=0;
     var d=0;
     var g=[];
+    var e;
     a=tab.length;
     for(var i=0;i<=a-2;i++){
         if(tab[i]<=tab[i+1]){
@@ -57,7 +58,8 @@ function InfoTab(tab){
         }
     }
     for(var f=0;f<=a-1;f++){
-        d=d+tab[f];
+        e=parseInt(tab[f]);
+        d=d+e;
     }
     g=[b,d/a];
     return g;

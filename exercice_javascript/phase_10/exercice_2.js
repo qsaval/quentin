@@ -56,7 +56,6 @@ function InfoTab(tab){
             }
         }
     }
-    d=0;
     for(var f=0;f<=a-1;f++){
         d=d+tab[f];
     }

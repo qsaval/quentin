@@ -1,4 +1,4 @@
-function verif(num,a){
+function verif(nom,a){
     if(nom<a){
         alert("trop petit");
     }
@@ -6,10 +6,11 @@ function verif(num,a){
         alert("trop grand");
     }
     else if (nom==a){
-        alert("bon nombre")
+        alert("bon nombre");
     }
 }
 
+var nom=document.getElementById("textBox1").value;
 var a=Math.random()*10;
-var b=window.prompt();
-verif(b,a);
+var element=document.getElementById("button1");
+element.addEventListener("click",verif(nom,a));

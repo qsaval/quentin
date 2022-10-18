@@ -24,19 +24,26 @@
         </script>
     </head>
     <body>
-        <form action="" method="post" id="contact" onsubmit="return checkform(this)">
+        <form action="" method="post"  name="contact" id="contact" onSubmit="return checkform(this)">
             <legend>
-                Vos coordonnées :
+                <h1>Vos coordonnées :</h1>
             </legend>
+            <br>
+            <label style="color: red;">
+                *Ces zones sont obligatoires pour envoyer le formulaire
+            </label>
+            <br>
             <label for="Société">
                 Société :
             </label>
             <input type="text" name="Société"/>
+            <label style="color: red;">*</label>
             <br>
             <label>
                 Personne à contacter :
             </label>
             <input type="text" name="personne"/>
+            <label style="color: red;">*</label>
             <br>
             <label>
                 Adresse de l'entreprise :
@@ -47,16 +54,19 @@
                 Code postal :
             </label>
             <input type="text" name="code postal"/>
+            <label style="color: red;">*</label>
             <br>
             <label>
                 Ville :
             </label>
             <input type="text" name="ville"/>
+            <label style="color: red;">*</label>
             <br>
             <label>
                 E-mail :
             </label>
             <input type="email" name="email"/>
+            <label style="color: red;">*</label>
             <br>
             <label>
                 Téléphone :
@@ -85,7 +95,8 @@
                 <option>
                     Visual Basic
                 </option>
-                <option>
+                <option>ubmit="return checkform(this)">
+                    <legend>
                     Power Builder
                 </option>
                 <option>

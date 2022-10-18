@@ -5,9 +5,26 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <script>
+            function checkForm(f){
+                if (f.element[société].value==""){
+                    alert("entre la nom de société s.v.p");
+                    return false;
+                }
+                if (f.element[personne].value==""){
+                    alert("entrez le nom de la personne a contact s.v.p");
+                    return false;
+                }
+                if (f.element[ville].value==""){
+                    alert("entre le nom de la ville de l'entreprise s.v.p");
+                    return false;
+                }
+                return true;    
+            }
+        </script>
     </head>
     <body>
-        <form action="" id="contact" onSubmit="return checkForm(this)">
+        <form action="" method="post" id="contact" onsubmit="return checkform(this)">
             <legend>
                 Vos coordonnées :
             </legend>
@@ -97,6 +114,5 @@
             <input type="submit" value="Envoyer">
             <input type="button" value="Effacer">
         </form>
-        <script src="exercice.js"></script>
     </body>
 </html>

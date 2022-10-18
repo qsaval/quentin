@@ -24,7 +24,7 @@
         </script>
     </head>
     <body>
-        <form action="" method="post"  name="contact" id="contact" onSubmit="return checkform(this)">
+        <form action="" method="post"  name="contact" id="contact" onSubmit="return checkForm(this)">
             <legend>
                 <h1>Vos coordonnées :</h1>
             </legend>
@@ -37,13 +37,17 @@
                 Société :
             </label>
             <input type="text" name="Société"/>
-            <label style="color: red;">*</label>
+            <label style="color: red;">
+                *
+            </label>
             <br>
             <label>
                 Personne à contacter :
             </label>
             <input type="text" name="personne"/>
-            <label style="color: red;">*</label>
+            <label style="color: red;">
+                *
+            </label>
             <br>
             <label>
                 Adresse de l'entreprise :
@@ -54,19 +58,25 @@
                 Code postal :
             </label>
             <input type="text" name="code postal"/>
-            <label style="color: red;">*</label>
+            <label style="color: red;">
+                *
+            </label>
             <br>
             <label>
                 Ville :
             </label>
             <input type="text" name="ville"/>
-            <label style="color: red;">*</label>
+            <label style="color: red;">
+                *
+            </label>
             <br>
             <label>
                 E-mail :
             </label>
             <input type="email" name="email"/>
-            <label style="color: red;">*</label>
+            <label style="color: red;">
+                *
+            </label>
             <br>
             <label>
                 Téléphone :
@@ -95,8 +105,10 @@
                 <option>
                     Visual Basic
                 </option>
-                <option>ubmit="return checkform(this)">
-                    <legend>
+                <option>
+                    ubmit
+                </option>
+                <option>
                     Power Builder
                 </option>
                 <option>
@@ -121,6 +133,7 @@
                     Autres...
                 </option>
             </select>
+            <textarea></textarea>
             <br>
             <input type="submit" value="Envoyer">
             <input type="button" value="Effacer">

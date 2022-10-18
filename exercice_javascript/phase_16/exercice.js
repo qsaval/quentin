@@ -6,6 +6,7 @@ document.getElementById("contact").addEventListener("submit",function (e){
     var personne=document.getElementById("personne");
     var ville=document.getElementById("ville");
     var code=document.getElementById("code");
+    var email=document.getElementById("email");
 
     code=par
     if(societe.value==""){
@@ -19,6 +20,9 @@ document.getElementById("contact").addEventListener("submit",function (e){
     }
     if(code.lengh<5){
         erreur="entrez le code postal sur 5 chiffre s.v.p"
+    }
+    if(re){
+
     }
     if(erreur){
         e.preventDefault();

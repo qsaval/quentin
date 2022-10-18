@@ -20,8 +20,7 @@ document.getElementById("contact").addEventListener("submit",function (e){
         erreur="entrez le nom de la ville de l'entreprise s.v.p";
     }
     if(code.value.length<5&& code.value.length>0){
-        er
-        reur="entrez le code postal sur 5 chiffre s.v.p";
+        erreur="entrez le code postal sur 5 chiffre s.v.p";
     }
     b=a.test(email);
     if(b){

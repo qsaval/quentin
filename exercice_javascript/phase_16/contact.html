@@ -1,101 +1,102 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form>
-        <legend>
-            Vos coordonnées :
-        </legend>
-        <label for="Société">
-            Société :
-        </label>
-        <input type="text" name="Société">
-        <br>
-        <label>
-            Personne à contacter :
-        </label>
-        <input type="text" name="personne">
-        <br>
-        <label>
-            Adresse de l'entreprise :
-        </label>
-        <input type="text" name="adresse">
-        <br>
-        <label>
-            Code postal :
-        </label>
-        <input type="text" name="code postal">
-        <br>
-        <label >
-            Ville :
-        </label>
-        <input type="text" name="ville">
-        <br>
-        <label>
-            E-mail :
-        </label>
-        <input type="email" name="email">
-        <br>
-        <label>
-            Téléphone :
-        </label>
-        <input type="text" name="téléphone">
-        <br>
-        <label>
-            Sélectionnez l'environnement technique du projet :
-        </label>
-        <select name="projet">
-            <option>
-                Choisissez
-            </option>
-            <option>
-                Access
-            </option>
-            <option>
-                Java
-            </option>
-            <option>
-                Delphi
-            </option>
-            <option>
-                Windev
-            </option>
-            <option>
-                Visual Basic
-            </option>
-            <option>
-                Power Builder
-            </option>
-            <option>
-                Internet
-            </option>
-            <option>
-                Intranet
-            </option>
-            <option>
-                Window NT
-            </option>
-            <option>
-                Unix
-            </option>
-            <option>
-                SQL Server
-            </option>
-            <option>
-                Oracle
-            </option>
-            <option>
-                Autres...
-            </option>
-        </select>
-        <br>
-        <input type="button" value="Envoyer">
-        <input type="button" value="Effacer">
-    </form>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <form action="" id="contact" onSubmit="return checkForm(this)">
+            <legend>
+                Vos coordonnées :
+            </legend>
+            <label for="Société">
+                Société :
+            </label>
+            <input type="text" name="Société"/>
+            <br>
+            <label>
+                Personne à contacter :
+            </label>
+            <input type="text" name="personne"/>
+            <br>
+            <label>
+                Adresse de l'entreprise :
+            </label>
+            <input type="text" name="adresse"/>
+            <br>
+            <label>
+                Code postal :
+            </label>
+            <input type="text" name="code postal"/>
+            <br>
+            <label>
+                Ville :
+            </label>
+            <input type="text" name="ville"/>
+            <br>
+            <label>
+                E-mail :
+            </label>
+            <input type="email" name="email"/>
+            <br>
+            <label>
+                Téléphone :
+            </label>
+            <input type="text" name="téléphone"/>
+            <br>
+            <label>
+                Sélectionnez l'environnement technique du projet :
+            </label>
+            <select name="projet">
+                <option>
+                    Choisissez
+                </option>
+                <option>
+                    Access
+                </option>
+                <option>
+                    Java
+                </option>
+                <option>
+                    Delphi
+                </option>
+                <option>
+                    Windev
+                </option>
+                <option>
+                    Visual Basic
+                </option>
+                <option>
+                    Power Builder
+                </option>
+                <option>
+                    Internet
+                </option>
+                <option>
+                    Intranet
+                </option>
+                <option>
+                    Window NT
+                </option>
+                <option>
+                    Unix
+                </option>
+                <option>
+                    SQL Server
+                </option>
+                <option>
+                    Oracle
+                </option>
+                <option>
+                    Autres...
+                </option>
+            </select>
+            <br>
+            <input type="submit" value="Envoyer">
+            <input type="button" value="Effacer">
+        </form>
+        <script src="exercice.js"></script>
+    </body>
 </html>

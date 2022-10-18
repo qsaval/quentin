@@ -1,14 +1,14 @@
 function checkForm(f){
     if (f.element[société].value==null){
-        alert("ecrire un nom de société")
+        alert("entre la nom de société s.v.p")
         return false
     }
     if (f.element[personne].value==null){
-        alert("ecrire un nom de contact")
+        alert("entrez le nom de la personne a contact s.v.p")
         return false
     }
     if (f.element[ville].value==null){
-        alert("ecrire un nom de ville")
+        alert("entre le nom de la ville de l'entreprise s.v.p")
         return false
     }
     

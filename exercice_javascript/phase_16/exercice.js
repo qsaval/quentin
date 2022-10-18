@@ -1,15 +1,26 @@
-function checkForm(f){
-    if (f.element[société].value==null){
-        alert("entre la nom de société s.v.p")
-        return false
+document.getElementById("contact").addEventListener("submit",function (e){
+    e.preventDefault();
+
+    var erreur;
+    var societe=document.getElementById("societe");
+    var personne=document.getElementById("personne");
+    var ville=document.getElementById("ville");
+
+    if(!societe.value){
+        erreur="entrez la nom de société s.v.p";
     }
-    if (f.element[personne].value==null){
-        alert("entrez le nom de la personne a contact s.v.p")
-        return false
+    if(!personne.value){
+        erreur="entrez le nom de la personne a contact s.v.p";
     }
-    if (f.element[ville].value==null){
-        alert("entre le nom de la ville de l'entreprise s.v.p")
-        return false
+    if(!ville.value){
+        erreur="entrez le nom de la ville de l'entreprise s.v.p";
     }
-    
-}
+    if(erreur){
+        e.preventDefault();
+        alert(erreur);
+        return false;
+    }
+    else{
+        return true;
+    }
+})

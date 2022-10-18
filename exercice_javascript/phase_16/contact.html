@@ -5,23 +5,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <script>
-            function checkForm(f){
-                if (f.element[société].value==""){
-                    alert("entre la nom de société s.v.p");
-                    return false;
-                }
-                if (f.element[personne].value==""){
-                    alert("entrez le nom de la personne a contact s.v.p");
-                    return false;
-                }
-                if (f.element[ville].value==""){
-                    alert("entre le nom de la ville de l'entreprise s.v.p");
-                    return false;
-                }
-                return true;    
-            }
-        </script>
     </head>
     <body>
         <form action="" method="post"  name="contact" id="contact" onSubmit="return checkForm(this)">
@@ -36,7 +19,7 @@
             <label for="Société">
                 Société :
             </label>
-            <input type="text" name="Société"/>
+            <input type="text" name="Société" id="societe"/>
             <label style="color: red;">
                 *
             </label>
@@ -44,7 +27,7 @@
             <label>
                 Personne à contacter :
             </label>
-            <input type="text" name="personne"/>
+            <input type="text" name="personne" id="personne"/>
             <label style="color: red;">
                 *
             </label>
@@ -65,7 +48,7 @@
             <label>
                 Ville :
             </label>
-            <input type="text" name="ville"/>
+            <input type="text" name="ville" id="ville"/>
             <label style="color: red;">
                 *
             </label>
@@ -136,7 +119,8 @@
             <textarea></textarea>
             <br>
             <input type="submit" value="Envoyer">
-            <input type="button" value="Effacer">
+            <input type="reset" value="Effacer">
         </form>
+        <script src="exercice.js"></script>
     </body>
 </html>

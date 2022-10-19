@@ -35,11 +35,11 @@ if(tot>500){
 }
 else{
     port=par*0.02;
-    if(port<6){
-        port=6;
-    }
-    pap=par+port
 }
+if(port<6){
+    port=6;
+}
+pap=par+port
 document.write("prix a payer : "+pap+"<br>")
 document.write("remise : "+rem+"<br>")
 document.write("frais de port : "+port)

@@ -9,6 +9,7 @@ document.getElementById("contact").addEventListener("submit",function (e){
     var email=document.getElementById("email");
     var a=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     var b;
+    var c=/^[A-Z,a-z]+$/;
 
     if(societe.value==""){
         erreur="entrez la nom de société s.v.p";
@@ -23,8 +24,14 @@ document.getElementById("contact").addEventListener("submit",function (e){
         erreur="entrez le code postal sur 5 chiffre s.v.p";
     }
     b=a.test(email);
-    if(b){
+    if(!b){
         erreur="entrez email de entreprise societe s.v.p";
+    }
+    if(c.test(personne)){
+        erreur="entrez le nom de la personne a contact s.v.p";
+    }
+    if(c.test(ville)){
+        erreur="entrez le nom de la ville de l'entreprise s.v.p";
     }
     if(erreur){
         e.preventDefault();

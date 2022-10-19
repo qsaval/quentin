@@ -27,7 +27,7 @@ else {
         }
     }
 }
-if(tot>500){
+if(par>500){
     port=0;
     pap=par;
 }

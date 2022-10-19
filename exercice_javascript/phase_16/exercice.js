@@ -24,13 +24,13 @@ document.getElementById("contact").addEventListener("submit",function (e){
         erreur="entrez le code postal sur 5 chiffre s.v.p";
     }
     b=a.test(email);
-    if(!b){
+    if(b){
         erreur="entrez email de entreprise societe s.v.p";
     }
-    if(c.test(personne)){
+    if(!c.test(personne.value)){
         erreur="entrez le nom de la personne a contact s.v.p";
     }
-    if(c.test(ville)){
+    if(!c.test(ville.value)){
         erreur="entrez le nom de la ville de l'entreprise s.v.p";
     }
     if(erreur){

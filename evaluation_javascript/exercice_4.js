@@ -5,8 +5,6 @@ var rem;
 var par;
 var pap;
 var port;
-var a;
-var b;
 
 tot=pu*qtecom;
 if(tot>100 && tot<200){
@@ -35,9 +33,9 @@ if(tot>500){
 }
 else{
     port=par*0.02;
-}
-if(port<6){
-    port=6;
+    if(port<6){
+        port=6;
+    }
 }
 pap=par+port
 document.write("prix a payer : "+pap+"<br>")

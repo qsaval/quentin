@@ -10,6 +10,7 @@ document.getElementById("contact").addEventListener("submit",function (e){
     var a=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     var b;
     var c=/^[A-Z,a-z]+$/;
+    var d=/^[0-9]+$/;
 
     if(societe.value==""){
         erreur="entrez la nom de société s.v.p";
@@ -32,6 +33,9 @@ document.getElementById("contact").addEventListener("submit",function (e){
     }
     if(!c.test(ville.value)){
         erreur="entrez le nom de la ville de l'entreprise s.v.p";
+    }
+    if(!d.test(code.value)){
+        erreur="entrez le code postal sur 5 chiffre s.v.p";
     }
     if(erreur){
         e.preventDefault();

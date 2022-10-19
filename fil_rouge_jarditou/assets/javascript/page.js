@@ -33,6 +33,9 @@ document.getElementById("contact").addEventListener("submit",function (e){
     if(!d.test(code.value)){
         erreur="entrez le code postal sur 5 chiffre s.v.p";
     }
+    if(document.getElementById(condition)){
+        erreur="cochée la case pour envoyer";
+    }
     if(erreur){
         e.preventDefault();
         alert(erreur);

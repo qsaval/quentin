@@ -14,13 +14,19 @@ if(tot>100 && tot<200){
     par=tot-rem;
 }
 else {
-    if(tot>200){
-        rem=tot*0.1;
+    if(tot==100||tot==200){
+        rem=tot*0.05;
         par=tot-rem;
     }
     else{
-        par=tot;
-        rem=0;
+        if(tot>200){
+            rem=tot*0.1;
+            par=tot-rem;
+        }
+        else{
+            par=tot;
+            rem=0;
+        }
     }
 }
 if(tot>500){

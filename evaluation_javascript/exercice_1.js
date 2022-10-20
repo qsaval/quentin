@@ -16,7 +16,7 @@ else{
         d=1;
     }
 }
-while(a[i]<S100){
+while(a[i]<100){
     i++;
     a[i]=window.prompt("entre votre age");
     if(a[i]<20){

@@ -1,30 +1,33 @@
 var a=[];
-var i=1;
+var i;
 var b=0;
 var c=0;
 var d=0;
 
-a[0]=window.prompt("entre votre age");
-if(a[0]<20){
+/*a[i]=window.prompt("entre votre age");
+if(a[i]<20){
     b++;
 }
-else if(a[0]>40){
-    c++;
-}
-else{
-    d++;
-}
-
-while(a[i]<100){
-    a[i]=window.prompt("entre votre age");
-    if(a[i]<20){
-        b++;
-    }
-    else if(a[i]>40){
+else{ 
+    if(a[i]>40){
         c++;
     }
     else{
         d++;
+    }
+}*/
+for(i=0;i<=10;i++){
+    a[i]=window.prompt("entre votre age");
+    if(a[i]<20){
+        b++;
+    }
+    else{ 
+        if(a[i]>40){
+            c++;
+        }
+        else{
+            d++;
+        }
     }
     i++;
 }

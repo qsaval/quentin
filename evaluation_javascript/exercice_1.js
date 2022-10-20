@@ -6,17 +6,17 @@ var d=0;
 
 a[i]=window.prompt("entre votre age");
 if(a[i]<20){
-    b++;
+    b=1;
 }
 else{ 
     if(a[i]>40){
-        c++;
+        c=1;
     }
     else{
-        d++;
+        d=1;
     }
 }
-while(a[i]>100){
+while(a[i]<S100){
     i++;
     a[i]=window.prompt("entre votre age");
     if(a[i]<20){
@@ -34,4 +34,4 @@ while(a[i]>100){
 }
 document.write("il y a "+b+" personne de moins de 20 ans <br>");
 document.write("il y a "+c+" personne de plus de 40 ans <br>");
-document.write("il y a "+b+" personne de entre 20 et 40 ans");
+document.write("il y a "+d+" personne de entre 20 et 40 ans");

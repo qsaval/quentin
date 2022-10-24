@@ -9,7 +9,7 @@ document.getElementById("contact").addEventListener("submit",function (e){
     var a=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     var c=/^[A-Z,a-z]+$/;
     var d=/^[0-9]+$/;
-    console.log(condition);
+    
     if(nom.validity.valueMissing){
         erreur="entrez votre nom s.v.p";
     }
@@ -30,6 +30,9 @@ document.getElementById("contact").addEventListener("submit",function (e){
     }
     if(!d.test(code.value)){
         erreur="entrez le code postal sur 5 chiffre s.v.p";
+    }
+    if(document.getElementById("condition").checked==false){
+        erreur="cochee le traitement d'un formation";
     }
     if(erreur){
         e.preventDefault();

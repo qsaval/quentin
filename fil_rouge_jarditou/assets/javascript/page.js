@@ -9,11 +9,11 @@ document.getElementById("contact").addEventListener("submit",function (e){
     var a=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     var c=/^[A-Z,a-z]+$/;
     var d=/^[0-9]+$/;
-    
-    if(nom.value==""){
+    console.log(condition);
+    if(nom.validity.valueMissing){
         erreur="entrez votre nom s.v.p";
     }
-    if(prenom.value==""){
+    if(prenom.validity.valueMissing){
         erreur="entrez votre prenom s.v.p";
     }
     if(code.value.length<5&& code.value.length>0){
@@ -30,9 +30,6 @@ document.getElementById("contact").addEventListener("submit",function (e){
     }
     if(!d.test(code.value)){
         erreur="entrez le code postal sur 5 chiffre s.v.p";
-    }
-    if(document.getElementById(condition)){
-        erreur="cochée la case pour envoyer";
     }
     if(erreur){
         e.preventDefault();

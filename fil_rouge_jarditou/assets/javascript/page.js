@@ -6,7 +6,9 @@ document.getElementById("contact").addEventListener("submit",function (e){
     var prenom=document.getElementById("prenom");
     var code=document.getElementById("code");
     var email=document.getElementById("email");
+    var date1=document.getElementById("date");
     var a=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var b=/^[0-9]+\/[0-9]\/[0-9]+$/;
     var c=/^[A-Z,a-z]+$/;
     var d=/^[0-9]+$/;
     
@@ -31,11 +33,14 @@ document.getElementById("contact").addEventListener("submit",function (e){
     if(!d.test(code.value)){
         erreur="entrez le code postal sur 5 chiffre s.v.p";
     }
+    if(b.test(date1.value)){
+        erreur="entrez votre date de naissance";
+    }
     if(document.getElementById("condition").checked==false){
         erreur="cochee le traitement d'un formation s.v.p";
     }
     if(document.getElementById("sexe1").checked==false&&document.getElementById("sexe2").checked==false){
-        erreur="ryhe";
+        erreur="vous pourriez nous indiquer votre sexe s.v.p";
     }
     if(erreur){
         e.preventDefault();

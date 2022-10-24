@@ -37,7 +37,7 @@ document.getElementById("contact").addEventListener("submit",function (e){
         erreur="entrez votre date de naissance";
     }
     if(document.getElementById("condition").checked==false){
-        erreur="cochee le traitement d'un formation s.v.p";
+        erreur="cochee le traitement d'information s.v.p";
     }
     if(document.getElementById("sexe1").checked==false&&document.getElementById("sexe2").checked==false){
         erreur="vous pourriez nous indiquer votre sexe s.v.p";

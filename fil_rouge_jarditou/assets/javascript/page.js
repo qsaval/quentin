@@ -32,7 +32,10 @@ document.getElementById("contact").addEventListener("submit",function (e){
         erreur="entrez le code postal sur 5 chiffre s.v.p";
     }
     if(document.getElementById("condition").checked==false){
-        erreur="cochee le traitement d'un formation";
+        erreur="cochee le traitement d'un formation s.v.p";
+    }
+    if(document.getElementById("sexe1").checked==false&&document.getElementById("sexe2").checked==false){
+        erreur="ryhe";
     }
     if(erreur){
         e.preventDefault();

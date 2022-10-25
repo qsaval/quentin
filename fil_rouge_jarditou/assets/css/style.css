@@ -4,7 +4,6 @@ header{
 }
 nav {
     display: flex;
-    padding: 20px;
     width: auto;
     height: auto;
     background-color: black;
@@ -17,10 +16,8 @@ nav a{
 footer{
     display: flex;
     background-color: black;
-    padding: 10px;
     width: auto;
     height: auto;
-        
  }
 footer {
     color: white;
@@ -96,6 +93,10 @@ td,th{
 #promotion{
     width: 100%;
 }
+#logo{
+    width: 350px; 
+    height: 100px;
+}
 
 @media screen and (max-width: 768px) {
    #rectangle{
@@ -119,7 +120,14 @@ td,th{
         height: 75px;
    }
    table{
-    width: auto;
-    height: auto;
+        width: auto;
+        height: auto;
+   }
+   #logo{
+        width: 175px;
+        height: 50px;
+   }
+   #para{
+        font-size: 20px;
    }
 }

@@ -97,6 +97,12 @@ td,th{
     width: 350px; 
     height: 100px;
 }
+#titre{
+    font-size: 20px;
+}
+#title{
+    font-size: 30px;
+}
 
 @media screen and (max-width: 768px) {
    #rectangle{

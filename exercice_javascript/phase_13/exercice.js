@@ -19,10 +19,11 @@ function moyenne (tab){
 }
 
 
-var a =[];
+var a=[];
 var i=0;
 
 a[i]=window.prompt("donner un nombre");
+console.log(a);
 while (a[i]!=0){
     i++;
     a[i]=window.prompt("donner un nombre");

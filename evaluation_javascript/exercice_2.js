@@ -12,4 +12,5 @@ function TableMultiplication(m){
 var a=window.prompt("choisir la table");
 
 TableMultiplication(a);
+document.write('<br><br><a href="index.html">Accueil</a>');
 })

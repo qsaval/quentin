@@ -38,8 +38,9 @@ else{
         port=6;
     }
 }
-pap=par+port
-document.write("prix a payer : "+pap+"<br>")
-document.write("remise : "+rem+"<br>")
-document.write("frais de port : "+port)
+pap=par+port;
+document.write("prix a payer : "+pap+"<br>");
+document.write("remise : "+rem+"<br>");
+document.write("frais de port : "+port);
+document.write('<br><br><a href="index.html">Accueil</a>');
 })

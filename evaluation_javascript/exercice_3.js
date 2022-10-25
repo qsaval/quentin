@@ -17,4 +17,6 @@ if(tab[a-1]!=""){
 }
 else{
     document.write(tab);
-}})
+}
+document.write('<br><br><a href="index.html">Accueil</a>');
+})

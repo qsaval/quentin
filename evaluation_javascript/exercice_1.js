@@ -35,5 +35,6 @@ while (a[i] < 100) {
 }
 document.write("il y a " + b + " personne de moins de 20 ans <br>");
 document.write("il y a " + c + " personne de plus de 40 ans <br>");
-document.write("il y a " + d + " personne de entre 20 et 40 ans");
+document.write("il y a " + d + " personne de entre 20 et 40 ans<br><br>");
+document.write('<a href="index.html">Accueil</a>');
 })

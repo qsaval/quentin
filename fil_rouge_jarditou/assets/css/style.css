@@ -74,18 +74,41 @@ form{
 #liste1 li{
     margin: 20px;
 }
+.photo{
+    width: 250px;
+    height: 250px;
+}
+#photo1{
+    width: 350px;
+    height: 250px;
+}
+#ligne{
+    width: 20px;
+}
 
 @media screen and (max-width: 768px) {
    #rectangle{
-    width: 0%;
+        width: 0%;
    }
    #rectangle1{
-    width: 0%;
+        width: 0%;
    }
    nav #liste{
-    flex-direction: column;
+        flex-direction: column;
    }
    article{
-    font-size: 15px;
+        font-size: 15px;
+   }
+   .photo{
+        width: 100px;
+        height: 100px;
+   }
+   #photo1{
+        width: 125px;
+        height: 75px;
+   }
+   table{
+    width: auto;
+    height: auto;
    }
 }

@@ -1,6 +1,6 @@
 function GetInteger(){
     var a;
-    a=window.prompt("saisir un entier");
+    a=window.prompt("saisir un rang");
     return a;
 }
 
@@ -66,8 +66,8 @@ function InfoTab(tab){
 }
 
 
-var a= GetInteger();
 var b=InitTab();
+var a= GetInteger();
 var c=[];
 var d;
 var e=[];

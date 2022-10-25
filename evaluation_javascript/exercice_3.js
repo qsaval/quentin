@@ -1,3 +1,4 @@
+document.getElementById("exercice3").addEventListener("submit",function (){
 var tab=["Audrey","Aurélien","Flavien","Jérémy","Laurent","Melik","Nouara","Salem","Samuel","Stéphane"];
 var prenom = window.prompt("entre un prenom");
 var a=tab.length;
@@ -16,4 +17,4 @@ if(tab[a-1]!=""){
 }
 else{
     document.write(tab);
-}
+}})

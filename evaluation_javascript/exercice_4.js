@@ -1,3 +1,4 @@
+document.getElementById("exercice4").addEventListener("submit",function (){
 var pu=window.prompt("prix unitaire");
 var qtecom=window.prompt("quantité commandée");
 var tot;
@@ -41,3 +42,4 @@ pap=par+port
 document.write("prix a payer : "+pap+"<br>")
 document.write("remise : "+rem+"<br>")
 document.write("frais de port : "+port)
+})

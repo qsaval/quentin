@@ -1,3 +1,4 @@
+document.getElementById("exercice2").addEventListener("submit",function (){
 function TableMultiplication(m){
     var a;
 
@@ -11,3 +12,4 @@ function TableMultiplication(m){
 var a=window.prompt("choisir la table");
 
 TableMultiplication(a);
+})

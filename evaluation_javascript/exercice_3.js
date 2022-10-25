@@ -9,9 +9,9 @@ for (var i=0;i<=a-1;i++){
         for(var f=i;f<=a-2;i++){
             tab[f]=tab[f+1].valueOf;
         }
-        tab[a-1]="";
     }
 }
+tab[a-1]="";
 if(tab[a-1]!=""){
     alert("le prenom n'est pas dans la liste");
 }

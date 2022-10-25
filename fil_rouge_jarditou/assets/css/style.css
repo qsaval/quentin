@@ -84,6 +84,7 @@ form{
 }
 table{
     border: 2px solid black;
+    width: 90%;
 }
 thead{
     border: 2px solid black;

@@ -79,11 +79,8 @@ form{
     height: 250px;
 }
 #photo1{
-    width: 350px;
-    height: 250px;
-}
-#ligne{
-    width: 20px;
+    width: 250px;
+    height: 150px;
 }
 
 @media screen and (max-width: 768px) {

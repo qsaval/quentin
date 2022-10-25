@@ -22,10 +22,10 @@ function moyenne (tab){
 var a =[];
 var i=0;
 
-a[i]=window.prompt();
+a[i]=window.prompt("donner un nombre");
 while (a[i]!=0){
     i++;
-    a[i]=window.prompt();
+    a[i]=window.prompt("donner un nombre");
     console.log(a);
 }
 b=somme(a);

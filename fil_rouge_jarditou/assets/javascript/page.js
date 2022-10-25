@@ -7,7 +7,7 @@ document.getElementById("contact").addEventListener("submit",function (e){
     var code=document.getElementById("code");
     var email=document.getElementById("email");
     var date1=document.getElementById("date");
-    var a=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var a=/^[a-z0-9.-]+@[a-z0-9.-]{2,}.[a-z]{2,4}$/;
     var b=/^[0-9]+\/[0-9]\/[0-9]+$/;
     var c=/^[A-Z,a-z]+$/;
     var d=/^[0-9]+$/;

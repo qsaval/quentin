@@ -26,6 +26,7 @@ a[i]=window.prompt();
 while (a[i]!=0){
     i++;
     a[i]=window.prompt();
+    console.log(a);
 }
 b=somme(a);
 c=moyenne(a); 

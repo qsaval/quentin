@@ -1,3 +1,4 @@
+document.getElementById("exercice2").addEventListener("submit",function (){
 var a = window.prompt("saisir un nombre entier");
 var b = window.prompt("saisir un nombre entier");
 var c = window.prompt("saisir une opération");
@@ -25,8 +26,9 @@ switch (c) {
         else{
             d=a/b;
         }
-        break
-    default:
-        window.alert("erreur");
-}
-document.write(a + c + b + "=" + d);
+            break
+        default:
+         window.alert("erreur");
+    }
+    document.write(a + c + b + "=" + d);
+})

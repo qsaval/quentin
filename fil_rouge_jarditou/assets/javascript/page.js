@@ -7,6 +7,9 @@ document.getElementById("contact").addEventListener("submit",function (e){
     var code=document.getElementById("code");
     var email=document.getElementById("email");
     var date1=document.getElementById("date");
+    var adresse=document.getElementById("adresse");
+    var ville=document.getElementById("ville");
+    var question=document.getElementById("question");
     var a=/^[a-z0-9.-]+@[a-z0-9.-]{2,}.[a-z]{2,4}$/;
     var b=/^[0-9]+\/[0-9]\/[0-9]+$/;
     var c=/^[A-Z,a-z]+$/;
@@ -17,6 +20,15 @@ document.getElementById("contact").addEventListener("submit",function (e){
     }
     if(prenom.validity.valueMissing){
         erreur="entrez votre prenom s.v.p";
+    }
+    if(adresse==""){
+        erreur="entrez votre adresse s.v.p"
+    }
+    if(ville==""){
+        erreur="entrez la ville de votre adresse s.v.p"
+    }
+    if(question==""){
+        erreur="poser votre question s.v.p"
     }
     if(code.value.length<5&& code.value.length>0){
         erreur="entrez le code postal sur 5 chiffre s.v.p";

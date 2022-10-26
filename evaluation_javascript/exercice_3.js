@@ -6,6 +6,7 @@ var b;
 var c;
 var d;
 var e;
+var f;
 
 for (var i=0;i<=a-1;i++){
     c=tab[i];
@@ -15,12 +16,14 @@ for (var i=0;i<=a-1;i++){
     }
 }
 if(tab[b]==""){
-    for(var f=b;f<=a-2;i++){
+    f=b;
+    while(f<a-1){
         d=f+1;
         e=tab[d];
         tab[f]=e;
-        tab[a-1]="";
+        f++;
     }
+    tab[a-1]="";
 }
 if(tab[a-1]!=""){
     alert("le prenom n'est pas dans la liste");

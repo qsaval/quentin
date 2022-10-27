@@ -12,7 +12,7 @@ document.getElementById("contact").addEventListener("submit",function (e){
     var question=document.getElementById("question");
     var sujet=document.getElementById("sujet");
     var a=/^[a-z0-9.-]+@[a-z0-9.-]{2,}.[a-z]{2,4}$/;
-    var b=/^[0-9]+\/[0-9]\/[0-9]+$/;
+    var b=/^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$/;
     var c=/^[A-Z,a-z]+$/;
     var d=/^[0-9]+$/;
     
@@ -42,7 +42,7 @@ document.getElementById("contact").addEventListener("submit",function (e){
     }
     if(code.value.length<5&& code.value.length>0){
         erreur=document.getElementById("erreurcode");
-        erreur.innerHTML="entrez le code postal sur 5 chiffre s.v.p";
+        erreur.innerHTML="entrez le code postal a 5 chiffre s.v.p";
     }
     if(sujet.selectedIndex==0){
         erreur=document.getElementById("erreursujet");
@@ -70,7 +70,11 @@ document.getElementById("contact").addEventListener("submit",function (e){
     }
     if(!d.test(code.value)){
         erreur=document.getElementById("erreurcode");
-        erreur.innerHTML="entrez le code postal sur 5 chiffre s.v.p";
+        erreur.innerHTML="entrez le code postal a 5 chiffre s.v.p";
+    }
+    if(!b.test(date1.value)){
+        erreur=document.getElementById("erreurdate");
+        erreur.innerHTML="entrez votre date de naissance s.v.p";
     }
     if(document.getElementById("condition").checked==false){
         erreur=document.getElementById("erreurcondition");

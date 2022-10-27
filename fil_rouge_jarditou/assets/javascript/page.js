@@ -24,19 +24,19 @@ document.getElementById("contact").addEventListener("submit",function (e){
         erreur=document.getElementById("erreurprenom");
         erreur.innerHTML="entrez votre prenom s.v.p";
     }
-    if(adresse.value==""){
+    if(adresse.validity.valueMissing){
         erreur=document.getElementById("erreuradresse");
         erreur.innerHTML="entrez votre adresse s.v.p";
     }
-    if(ville.value==""){
+    if(ville.validity.valueMissing){
         erreur=document.getElementById("erreurville");
         erreur.innerHTML="entrez la ville de votre adresse s.v.p";
     }
-    if(email.value==""){
+    if(email.validity.valueMissing){
         erreur=document.getElementById("erreuremail");
         erreur.innerHTML="entrez votre email s.v.p";
     }
-    if(question.value==""){
+    if(question.validity.valueMissing){
         erreur=document.getElementById("erreurquestion");
         erreur.innerHTML="poser votre question s.v.p";
     }

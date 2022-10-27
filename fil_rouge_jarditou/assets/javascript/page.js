@@ -15,6 +15,7 @@ document.getElementById("contact").addEventListener("submit",function (e){
     var b=/^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$/;
     var c=/^[A-Z,a-z]+$/;
     var d=/^[0-9]+$/;
+    var g=/^[A-Z,a-z,0-9]+$/
     
     if(nom.validity.valueMissing){
         erreur=document.getElementById("erreurnom");
@@ -75,6 +76,10 @@ document.getElementById("contact").addEventListener("submit",function (e){
     if(!b.test(date1.value)){
         erreur=document.getElementById("erreurdate");
         erreur.innerHTML="entrez votre date de naissance s.v.p";
+    }
+    if(!g.test(adresse.value)){
+        erreur=document.getElementById("erreuradresse");
+        erreur.innerHTML="entrez votre adresse s.v.p";
     }
     if(document.getElementById("condition").checked==false){
         erreur=document.getElementById("erreurcondition");

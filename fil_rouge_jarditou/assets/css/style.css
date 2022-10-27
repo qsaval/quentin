@@ -61,7 +61,7 @@ article{
     background-color: grey;
  }
 form{
-    width: 50%;
+    width: 30%;
 }
 #liste{
     display: flex;
@@ -114,33 +114,36 @@ span{
 @media screen and (max-width: 768px) {
    #rectangle{
         width: 0%;
-   }
+    }
    #rectangle1{
         width: 0%;
-   }
+    }
+   #rectangle2{
+    width: 0%;
+    }
    nav #liste{
         flex-direction: column;
-   }
+    }
    article{
         font-size: 15px;
-   }
+    }
    .photo{
         width: 100px;
         height: 100px;
-   }
+    }
    #photo1{
         width: 125px;
         height: 75px;
-   }
+    }
    table{
         width: auto;
         height: auto;
-   }
+    }
    #logo{
         width: 175px;
         height: 50px;
-   }
+    }
    #para{
         font-size: 20px;
-   }
+    }
 }

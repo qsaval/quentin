@@ -63,11 +63,6 @@ document.getElementById("contact").addEventListener("submit",function (e){
         erreur.innerHTML="entrez la ville de votre adresse s.v.p";
         erreur1=true;
     }
-    if(!c.test(question.value)){
-        erreur=document.getElementById("erreurquestion");
-        erreur.innerHTML="poser votre question s.v.p";
-        erreur1=true;
-    }
     if(!a.test(email.value)){
         erreur=document.getElementById("erreuremail");
         erreur.innerHTML="entrez votre email s.v.p";

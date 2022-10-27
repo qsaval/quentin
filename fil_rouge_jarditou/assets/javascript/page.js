@@ -11,11 +11,10 @@ document.getElementById("contact").addEventListener("submit",function (e){
     var ville=document.getElementById("ville");
     var question=document.getElementById("question");
     var sujet=document.getElementById("sujet");
-    var a=/^[a-z0-9.-]+@[a-z0-9.-]{2,}.[a-z]{2,4}?$/;
-    var b=/^[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}+$/ ;
+    var a=/^[a-z0-9.-]+@[a-z0-9.-]{2,}.[a-z]{2,4}$/;
+    var b=/^[0-9]+\/[0-9]\/[0-9]+$/;
     var c=/^[A-Z,a-z]+$/;
     var d=/^[0-9]+$/;
-    var e=/^[A-Z,a-z,0-9]+$/
     
     if(nom.validity.valueMissing){
         erreur="entrez votre nom s.v.p";
@@ -37,20 +36,12 @@ document.getElementById("contact").addEventListener("submit",function (e){
         erreur="poser votre question s.v.p";
         alert(erreur);
     }
-    if(email.value==""){
-        erreur="entrez votre email s.v.p";
-        alert(erreur);
-    }
     if(code.value.length<5&& code.value.length>0){
         erreur="entrez le code postal sur 5 chiffre s.v.p";
         alert(erreur);
     }
     if(!sujet=="Veuillez séléctionner un sujet"){
         erreur="Veuillez séléctionner un sujet s.v.p";
-        alert(erreur);
-    }
-    if(!e.test(adresse.value)){
-        erreur="entrez votre adresse s.v.p";
         alert(erreur);
     }
     if(!c.test(ville.value)){
@@ -61,7 +52,7 @@ document.getElementById("contact").addEventListener("submit",function (e){
         erreur="poser votre question s.v.p";
         alert(erreur);
     }
-    if(!a.test(email.value)){
+    if(a.test(email.value)){
         erreur="entrez votre email s.v.p";
         alert(erreur);
     }
@@ -78,7 +69,7 @@ document.getElementById("contact").addEventListener("submit",function (e){
         alert(erreur);
     }
     if(!b.test(date1.value)){
-        erreur="entrez votre date de naissance s.v.p";
+        erreur="entrez votre date de naissance";
         alert(erreur);
     }
     if(document.getElementById("condition").checked==false){

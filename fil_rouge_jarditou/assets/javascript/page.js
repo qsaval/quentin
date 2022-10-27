@@ -17,68 +17,64 @@ document.getElementById("contact").addEventListener("submit",function (e){
     var d=/^[0-9]+$/;
     
     if(nom.validity.valueMissing){
-        erreur="entrez votre nom s.v.p";
-        alert(erreur);
+        erreur=document.getElementById("erreurnom");
+        erreur.innerHTML="entrez votre nom s.v.p";
     }
     if(prenom.validity.valueMissing){
-        erreur="entrez votre prenom s.v.p";
-        alert(erreur);
+        erreur=document.getElementById("erreurprenom");
+        erreur.innerHTML="entrez votre prenom s.v.p";
     }
     if(adresse.value==""){
-        erreur="entrez votre adresse s.v.p";
-        alert(erreur);
+        erreur=document.getElementById("erreuradresse");
+        erreur.innerHTML="entrez votre adresse s.v.p";
     }
     if(ville.value==""){
-        erreur="entrez la ville de votre adresse s.v.p";
-        alert(erreur);
+        erreur=document.getElementById("erreurville");
+        erreur.innerHTML="entrez la ville de votre adresse s.v.p";
+    }
+    if(email.value==""){
+        erreur=document.getElementById("erreuremail");
+        erreur.innerHTML="entrez votre email s.v.p";
     }
     if(question.value==""){
-        erreur="poser votre question s.v.p";
-        alert(erreur);
+        erreur=document.getElementById("erreurquestion");
+        erreur.innerHTML="poser votre question s.v.p";
     }
     if(code.value.length<5&& code.value.length>0){
-        erreur="entrez le code postal sur 5 chiffre s.v.p";
-        alert(erreur);
-    }
-    if(!sujet=="Veuillez séléctionner un sujet"){
-        erreur="Veuillez séléctionner un sujet s.v.p";
-        alert(erreur);
+        erreur=document.getElementById("erreurcode");
+        erreur.innerHTML="entrez le code postal sur 5 chiffre s.v.p";
     }
     if(!c.test(ville.value)){
-        erreur="entrez la ville de votre adresse s.v.p";
-        alert(erreur);
+        erreur=document.getElementById("erreurville");
+        erreur.innerHTML="entrez la ville de votre adresse s.v.p";
     }
     if(!c.test(question.value)){
-        erreur="poser votre question s.v.p";
-        alert(erreur);
+        erreur=document.getElementById("erreurquestion");
+        erreur.innerHTML="poser votre question s.v.p";
     }
-    if(a.test(email.value)){
-        erreur="entrez votre email s.v.p";
-        alert(erreur);
+    if(!a.test(email.value)){
+        erreur=document.getElementById("erreuremail");
+        erreur.innerHTML="entrez votre email s.v.p";
     }
     if(!c.test(nom.value)){
-        erreur="entrez votre nom s.v.p";
-        alert(erreur);
+        erreur=document.getElementById("erreurnom");
+        erreur.innerHTML="entrez votre nom s.v.p";
     }
     if(!c.test(prenom.value)){
-        erreur="entrez votre prenom s.v.p";
-        alert(erreur);
+        erreur=document.getElementById("erreurprenom");
+        erreur.innerHTML="entrez votre prenom s.v.p";
     }
     if(!d.test(code.value)){
-        erreur="entrez le code postal sur 5 chiffre s.v.p";
-        alert(erreur);
-    }
-    if(!b.test(date1.value)){
-        erreur="entrez votre date de naissance";
-        alert(erreur);
+        erreur=document.getElementById("erreurcode");
+        erreur.innerHTML="entrez le code postal sur 5 chiffre s.v.p";
     }
     if(document.getElementById("condition").checked==false){
-        erreur="cochee le traitement d'information s.v.p";
-        alert(erreur);
+        erreur=document.getElementById("erreurcondition");
+        erreur.innerHTML="cochee le traitement d'information s.v.p";
     }
     if(document.getElementById("sexe1").checked==false&&document.getElementById("sexe2").checked==false){
-        erreur="vous pourriez nous indiquer votre sexe s.v.p";
-        alert(erreur);
+        erreur=document.getElementById("erreursexe");
+        erreur.innerHTML="vous pourriez nous indiquer votre sexe s.v.p";
     }
     if(erreur){
         e.preventDefault();

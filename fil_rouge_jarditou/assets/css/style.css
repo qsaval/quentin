@@ -55,7 +55,7 @@ article{
     background-color: gray;
 }
 form{
-    width: 30%;
+    width: 50%;
 }
 #liste{
     display: flex;
@@ -99,6 +99,10 @@ td,th{
 }
 #title{
     font-size: 30px;
+}
+span{
+    color: red;
+    font-style: italic;
 }
 
 @media screen and (max-width: 768px) {

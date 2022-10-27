@@ -53,42 +53,50 @@
                     Nom*:
                 </label>
                 <input type="text" name="nom" id="nom">
+                <span id="erreurnom"></span>
                 <br>
                 <label for="prenom" >
                     Prenom*:
                 </label>
                 <input type="text" name="prenom" id="prenom">
+                <span id="erreurprenom"></span>
                 <br>
                 <label for="sexe">
                     Sexe*:
                 </label>
                 <input type="radio" name="sexe" id="sexe1" value="Féminin">Féminin
                 <input type="radio" name="sexe" id="sexe2" value="Masculin">Masculin
+                <span id="erreursexe"></span>
                 <br>
                 <label for="date">
                     Date de naissance*:
                 </label>
                 <input type="date" name="date" id="date">
+                <span id="erreurdate"></span>
                 <br>
                 <label for="code">
                     Code postal*:
                 </label>
                 <input type="text" name="code" id="code">
+                <span id="erreurcode"></span>
                 <br>
                 <label for="adresse">
                     Adresse:
                 </label>
                 <input type="text" name="adresse" id="adresse">
+                <span id="erreuradresse"></span>
                 <br>
                 <label for="ville">
                     Ville:
                 </label>
                 <input type="text" name="ville" id="ville">
+                <span id="erreurville"></span>
                 <br>
                 <label for="email">
                     Email*:
                 </label>
                 <input type="email" name="email" id="email">
+                <span id="erreuremail"></span>
             </fieldset>
             <fieldset>
                 <legend>
@@ -114,13 +122,17 @@
                         Autres
                     </option>
                 </select>
+                <span id="erreursujet"></span>
                  <br>
                 <label for="question">
                     Votre question*:
                 </label>
                 <textarea name="question" id="question"></textarea>
+                <span id="erreurquestion"></span>
             </fieldset>
             <input type="checkbox" name="condition" id="condition"> * J'accepte le traitement information de ce formulaire
+            <br>
+            <span id="erreurcondition"></span>
             <br>
             <input type="submit" value="Envoyer">
             <input type="reset" value="Annuler">

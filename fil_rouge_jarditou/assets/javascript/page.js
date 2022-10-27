@@ -44,6 +44,10 @@ document.getElementById("contact").addEventListener("submit",function (e){
         erreur=document.getElementById("erreurcode");
         erreur.innerHTML="entrez le code postal sur 5 chiffre s.v.p";
     }
+    if(sujet.selectedIndex==0){
+        erreur=document.getElementById("erreursujet");
+        erreur.innerHTML="Veuillez choisir un sujet s.v.p";
+    }
     if(!c.test(ville.value)){
         erreur=document.getElementById("erreurville");
         erreur.innerHTML="entrez la ville de votre adresse s.v.p";

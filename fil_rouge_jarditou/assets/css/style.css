@@ -54,6 +54,11 @@ article{
     max-width: 1350px;
     background-color: gray;
 }
+#rectangle2{
+    width: 30%; ;
+    height: 650px;
+    background-color: grey;
+ }
 form{
     width: 50%;
 }

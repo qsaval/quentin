@@ -12,7 +12,7 @@ document.getElementById("contact").addEventListener("submit",function (e){
     var question=document.getElementById("question");
     var sujet=document.getElementById("sujet");
     var a=/^[a-z0-9.-]+@[a-z0-9.-]{2,}.[a-z]{2,4}?$/;
-    var b=/^[0-9][0-9]?\/[0-9][0-9]?\/[0-9][0-9]([0-9][0-9])$/ ;
+    var b=/^[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}+$/ ;
     var c=/^[A-Z,a-z]+$/;
     var d=/^[0-9]+$/;
     var e=/^[A-Z,a-z,0-9]+$/
@@ -35,6 +35,10 @@ document.getElementById("contact").addEventListener("submit",function (e){
     }
     if(question.value==""){
         erreur="poser votre question s.v.p";
+        alert(erreur);
+    }
+    if(email.value==""){
+        erreur="entrez votre email s.v.p";
         alert(erreur);
     }
     if(code.value.length<5&& code.value.length>0){

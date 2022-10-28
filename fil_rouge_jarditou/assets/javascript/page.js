@@ -43,7 +43,7 @@ document.getElementById("contact").addEventListener("submit",function (e){
         erreur.innerHTML="entrez votre email s.v.p";
         erreur1=true;
     }
-    if(question.validity.valueMissing){
+    if(question.value==""){
         erreur=document.getElementById("erreurquestion");
         erreur.innerHTML="poser votre question s.v.p";
         erreur1=true;

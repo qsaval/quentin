@@ -28,7 +28,7 @@ document.getElementById("contact").addEventListener("submit",function (e){
         erreur.innerHTML="entrez votre prenom s.v.p";
         erreur1=true;
     }
-    if(adresse.validity.valueMissing){
+    if(adresse.value==""){
         erreur=document.getElementById("erreuradresse");
         erreur.innerHTML="entrez votre adresse s.v.p";
         erreur1=true;

@@ -16,7 +16,7 @@ document.getElementById("contact").addEventListener("submit",function (e){
     var b=/^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$/;
     var c=/^[A-Z,a-z]+$/;
     var d=/^[0-9]+$/;
-    var g=/^[A-Z,a-z,0-9]+$/
+    var g=/^[a-zA-Z0-9\s\,\''\-]*$/
     
     if(nom.validity.valueMissing){
         erreur=document.getElementById("erreurnom");

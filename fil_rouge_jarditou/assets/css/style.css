@@ -67,7 +67,7 @@ form{
     display: flex;
     color: white;
 }
-a:link{
+a{
     text-decoration: none;
 }
 #liste li{

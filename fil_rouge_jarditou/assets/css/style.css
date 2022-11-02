@@ -68,14 +68,14 @@ form{
     color: white;
 }
 #liste li{
-    margin: 20px;
+    margin-left: 30px
 }
 #liste1{
     display: flex;
     color: white;
 }
 #liste1 li{
-    margin: 20px;
+    margin-left: 30px;
 }
 .photo{
     width: 250px;

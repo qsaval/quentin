@@ -40,7 +40,7 @@ table{
 }
 /*c'est le rectangle des contact et l'accueil*/
 #rectangle{
-    width: 30%; ;
+    width: 40%; ;
     height: 500px;
     background-color: grey;
  }
@@ -55,7 +55,7 @@ article{
 }
 /*c'est le rectangle de la page contact*/
 #rectangle2{
-    width: 30%; ;
+    width: 40%; ;
     height: 700px;
     background-color: grey;
  }

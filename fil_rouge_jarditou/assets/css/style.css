@@ -2,7 +2,7 @@
 header{
     display: flex;
 }
-nav {
+/*nav {
     display: flex;
     width: auto;
     height: auto;
@@ -10,12 +10,12 @@ nav {
 }
 nav a{
     display: flex;
-    color: white;
+    color: rgb(5, 5, 5);
     margin-right: 1%;
 }
 footer{
     display: flex;
-    background-color: black;
+    background-color: rgb(5, 2, 2);
     width: auto;
     height: auto;
  }
@@ -26,15 +26,15 @@ footer {
 table{
     border-collapse: collapse;
     width: 100%;
-}
+}*/
 #para{
     margin: auto;
     font-size: 30px;
 }
-#article{
+/*#article{
     padding: 30px;
     display: flex;
-}
+}*/
 #image{
     padding: 10px;
 }
@@ -44,23 +44,23 @@ table{
     height: 500px;
     background-color: grey;
  }
-article{
+/*article{
     width: 70%;
 }
-/*c'est le rectangle du tableau*/
+c'est le rectangle du tableau
 #rectangle1{
     width: 40%; ;
     max-width: 1350px;
     background-color: gray;
 }
-/*c'est le rectangle de la page contact*/
+c'est le rectangle de la page contact
 #rectangle2{
     width: 40%; ;
     height: 700px;
     background-color: grey;
  }
 form{
-    width: 30%;
+    width: 35%;
 }
 #liste{
     list-style-type: none;
@@ -82,7 +82,7 @@ a{
 #liste1 li{
     margin-left: 30px;
     font-size: large;
-}
+}*/
 .photo{
     width: 250px;
     height: 250px;
@@ -91,7 +91,7 @@ a{
     width: 250px;
     height: 150px;
 }
-table{
+/*table{
     border: 1px;
     width: 90%;
 }
@@ -101,7 +101,7 @@ thead{
 td,th{
     border: 1px;
     padding: 10px;
-}
+}*/
 #promotion{
     width: 100%;
 }

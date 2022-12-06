@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body>
-        <header>
+        <header class="d-flex">
             <img src="assets/images/jarditou_logo.jpg" id="logo" title="logo jarditou" alt="logo jarditou"> 
             <p id="para">
                 Tout le jardin
@@ -42,110 +42,92 @@
           </nav>
         </nav>
         <section id="image">
-            <img src="assets/images/promotion.jpg" id="promotion" title="promotion" alt="promotion">
+            <img src="assets/images/promotion.jpg" id="promotion" title="promotion" alt="promotion" class="img-fluid">
         </section>
         <section id="article">
-        <article>
+        <article class="p-2">
         <h1 id="title">
                 Contact
         </h1>
         <p>
             * Ces zones sont obligatoires
         </p>
-        <form action="http://bienvenu.net/script.php" method="post" id="contact">
+        <form action="http://bienvenu.net/script.php" method="post" id="contact" class="">
             <fieldset>
                 <legend>
                     Vos coordonnées
                 </legend>
-                <label for="nom">
-                    Nom*:
-                </label>
-                <input type="text" name="nom" id="nom">
-                <br>
+                <div class="mb-2">
+                    <label for="nom" class="form-label">Nom*</label>
+                    <input type="text" class="form-control" id="nom" name="nom" placeholder="Veuillez saisir votre nom">
+                </div>
                 <span id="erreurnom"></span>
                 <br>
-                <label for="prenom" >
-                    Prenom*:
-                </label>
-                <input type="text" name="prenom" id="prenom">
-                <br>
+                <div class="mb-2">
+                    <label for="nom" class="form-label">Prenom*</label>
+                    <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Veuillez saisir votre prenom">
+                </div>
                 <span id="erreurprenom"></span>
                 <br>
                 <label for="sexe">
-                    Sexe*:
+                    Sexe*
                 </label>
+                <br>
                 <input type="radio" name="sexe" id="sexe1" value="Féminin">Féminin
                 <input type="radio" name="sexe" id="sexe2" value="Masculin">Masculin
                 <br>
                 <span id="erreursexe"></span>
                 <br>
-                <label for="date">
-                    Date de naissance*:
-                </label>
-                <input type="date" name="date" id="date">
-                <br>
+                <div class="mb-2">
+                    <label for="date" class="form-label">Date de naissance*</label>
+                    <input type="date" class="form-control" id="date" name="date">
+                </div>
                 <span id="erreurdate"></span>
                 <br>
-                <label for="code">
-                    Code postal*:
-                </label>
-                <input type="text" name="code" id="code">
-                <br>
+                <div class="mb-2">
+                    <label for="code" class="form-label">code postal*</label>
+                    <input type="text" class="form-control" id="code" name="code">
+                </div>
                 <span id="erreurcode"></span>
                 <br>
-                <label for="adresse">
-                    Adresse:
-                </label>
-                <input type="text" name="adresse" id="adresse">
-                <br>
+                <div class="mb-2">
+                    <label for="adresse" class="form-label">Adresse*</label>
+                    <input type="text" class="form-control" id="adresse" name="adresse">
+                </div>
                 <span id="erreuradresse"></span>
                 <br>
-                <label for="ville">
-                    Ville:
-                </label>
-                <input type="text" name="ville" id="ville">
-                <br>
+                <div class="mb-2">
+                    <label for="ville" class="form-label">ville*</label>
+                    <input type="text" class="form-control" id="ville" name="ville">
+                </div>
                 <span id="erreurville"></span>
                 <br>
-                <label for="email">
-                    Email*:
-                </label>
-                <input type="text" name="email" id="email">
-                <br>
+                <div class="mb-2">
+                    <label for="email" class="form-label">Email*</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+                </div>
                 <span id="erreuremail"></span>
             </fieldset>
-            <fieldset>
+            <fieldset class="">
                 <legend>
                     Votre demande
                 </legend>
                 <label for="sujet">
-                    Sujet*:
+                    Sujet*
                 </label>
-                <select name="sujet" size="1" id="sujet">
-                    <option selected>
-                        Veuillez séléctionner un sujet
-                    </option>
-                    <option>
-                        Mes commande
-                    </option>
-                    <option>
-                        Question sur un produit                       
-                    </option>
-                    <option>
-                        Réclamation
-                    </option>
-                    <option>
-                        Autres
-                    </option>
+                <select class="form-select" aria-label="Default select example" name="sujet" id="sujet">
+                    <option selected>Veuillez séléctionner un sujet</option>
+                    <option value="1">Mes commande</option>
+                    <option value="2">Question sur un produit</option>
+                    <option value="3">Réclamation</option>
+                    <option value="4">Autre</option>
                 </select>
-                <br>
                 <span id="erreursujet"></span>
                  <br>
-                <label for="question">
-                    Votre question*:
-                </label>
-                <textarea name="question" id="question"></textarea>
-                <br>
+                 <div class="mb-3">
+                    <label for="question" class="form-label">Votre question*</label>
+                    <textarea class="form-control" id="question" name="question" rows="3"></textarea>
+                  </div>
                 <span id="erreurquestion"></span>
             </fieldset>
             <input type="checkbox" name="condition" id="condition"> * J'accepte le traitement information de ce formulaire

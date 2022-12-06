@@ -38,13 +38,13 @@ table{
 #image{
     padding: 10px;
 }
-c'est le rectangle des contact et l'accueil*/
+c'est le rectangle des contact et l'accueil
 #rectangle{
     width: 40%; ;
     height: 500px;
     background-color: grey;
  }
-/*article{
+article{
     width: 70%;
 }
 c'est le rectangle du tableau
@@ -82,7 +82,7 @@ a{
 #liste1 li{
     margin-left: 30px;
     font-size: large;
-}*/
+}
 .photo{
     width: 250px;
     height: 250px;
@@ -91,7 +91,7 @@ a{
     width: 250px;
     height: 150px;
 }
-/*table{
+table{
     border: 1px;
     width: 90%;
 }
@@ -104,11 +104,11 @@ td,th{
 }
 #promotion{
     width: 100%;
-}*/
+}
 #logo{
     width: 350px; 
     height: 100px;
-}
+}*/
 #title{
     font-size: 30px;
 }

@@ -1,8 +1,8 @@
 
-/*header{
+header{
     display: flex;
 }
-nav {
+/*nav {
     display: flex;
     width: auto;
     height: auto;
@@ -108,14 +108,14 @@ td,th{
 #logo{
     width: 350px; 
     height: 100px;
-}*/
+}
 #title{
     font-size: 30px;
 }
 span{
     color: red;
     font-style: italic;
-}
+}*/
 
 @media screen and (max-width: 768px) {
    #rectangle{

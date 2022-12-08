@@ -77,3 +77,10 @@ join reservation r on res_cli_id=cli_id
 join chambre c2 on cha_id=res_cha_id
 join hotel h on hot_id=cha_hot_id
 where cli_nom = 'Squire'
+
+SELECT sta_id, AVG(DATEDIFF(res_date_debut, res_date_fin))
+from reservation r 
+join chambre c on  cha_id=res_cha_id
+join hotel h on hot_id=cha_hot_id
+join station s on sta_id=hot_sta_id
+group by sta_id

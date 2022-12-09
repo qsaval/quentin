@@ -53,6 +53,7 @@ JOIN chambre on cha_id=res_cha_id
 JOIN hotel on hot_id=cha_hot_id
 
 
+
 SELECT sta_nom, COUNT(*)
 from hotel h
 JOIN station s on sta_id=hot_sta_id 

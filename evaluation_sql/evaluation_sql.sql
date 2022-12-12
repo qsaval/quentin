@@ -45,10 +45,16 @@ join orders o on orders.OrderID = `order details`=OrderID
 WHERE Year(OrderDate) = 2007;
 
 --8--
-
+SELECT MONTH(OrderDate), 
+from orders o 
+join `order details` od on `order details`.OrderID = orders.OrderID 
+GROUP BY OrderDate 
 
 --9--
-
+SELECT OrderDate 
+FROM orders o 
+join customers c on customers.CustomerID = orders.CustomerID
+WHERE CompanyName = 'Du monde entier' AND YEAR(OrderDate) = 1998
 
 --10--
 SELECT AVG(DATEDIFF(OrderDate,ShippedDate)) 

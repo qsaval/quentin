@@ -32,10 +32,10 @@ WHERE SUM(UnitPrice * Quantity)>30000
 --6--
 SELECT customers.Country
 from customers c 
-join orders o on CustomerID = CustomerID
-join `order details` od on OrderID = OrderID
-join products p on ProductID = ProductID
-join suppliers s on SupplierID = SupplierID
+join orders o on orders.CustomerID = customers.CustomerID
+join `order details` od on `order details`.OrderID = orders.OrderID
+join products p on products.ProductID = `order details`.ProductID
+join suppliers s on suppliers.SupplierID = products.SupplierID
 WHERE CompanyName = 'Exotic Liquids'
 
 --7--

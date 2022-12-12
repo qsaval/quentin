@@ -16,6 +16,9 @@ from produit p
 WHERE stkphy <= stkale and qteann < 1000
 
 --5--
+SELECT posfou, nomfou
+from fournis f 
+WHERE posfou > 70000 AND !(posfou >80000 AND posfou <90000)
 
 --6--
 SELECT numcom 

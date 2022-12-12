@@ -10,10 +10,11 @@ join suppliers s on suppliers.SupplierID = products.SupplierID
 WHERE CompanyName = 'Exotic Liquide';
 
 --3--
-SELECT CompanyName, ShipVia
-from customers c
-join orders o on orders.CustomerID = customers.CustomerID
-WHERE Country = 'France';
+SELECT CompanyName, COUNT(*)
+from products p 
+join suppliers s on suppliers.SupplierID = products.SupplierID 
+where Country = 'France'
+group by ProductID;
 
 --4--
 
@@ -22,6 +23,7 @@ WHERE Country = 'France';
 
 
 --6--
+
 
 --7--
 SELECT SUM(UnitPrice * Quantity)

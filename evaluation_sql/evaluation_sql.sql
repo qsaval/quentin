@@ -1,61 +1,69 @@
 --1--
-SELECT CompanyName, ContactName, ContactTitle, Phone
-from customers c
+SELECT CompanyName as societe, ContactName as contact, ContactTitle as fonction, Phone as telephone
+from customers
 where Country = 'France';
 
 --2--
-SELECT ProductName, UnitPrice
-from products p 
-join suppliers s on suppliers.SupplierID = products.SupplierID 
+SELECT ProductName as produit, UnitPrice as prix
+from products 
+join suppliers on suppliers.SupplierID = products.SupplierID 
 WHERE CompanyName = 'Exotic Liquide';
 
 --3--
-SELECT CompanyName, COUNT(*)
-from products p 
-join suppliers s on suppliers.SupplierID = products.SupplierID 
+SELECT CompanyName as fournisseur, COUNT(ProductID) as 'nbre produits'
+from products
+join suppliers on suppliers.SupplierID = products.SupplierID 
 where Country = 'France'
-group by ProductID;
+GROUP by ProductID
+ORDER by ProductID;
+--a finir--
 
 --4--
-SELECT CompanyName, COUNT(CustomerID) 
-from orders o 
-join customers c on customers.CustomerID = orders.CustomerID
-WHERE Country = 'France' AND COUNT(CustomerID) > 10; 
+SELECT CompanyName as client, COUNT(CompanyName) as 'nbre commandes' 
+from orders
+join customers on customers.CustomerID = orders.CustomerID
+WHERE Country = 'France'
+GROUP BY CompanyName ;
+--a finir-- 
 
 --5--
-SELECT CompanyName, Country , SUM(UnitPrice * Quantity)
-from `order details` od 
-join orders o  on orders.OrderID = `order details`.OrderID
-join customers c on customers.CustomerID = orders.CustomerID
-WHERE SUM(UnitPrice * Quantity)>30000
+SELECT CompanyName as client, SUM(UnitPrice * Quantity) as ca, Country as pays
+from `order details` 
+join orders  on orders.OrderID = `order details`.OrderID
+join customers on customers.CustomerID = orders.CustomerID
+group by UnitPrice;
+--a finir--
 
 --6--
-SELECT customers.Country
-from customers c 
-join orders o on orders.CustomerID = customers.CustomerID
-join `order details` od on `order details`.OrderID = orders.OrderID
-join products p on products.ProductID = `order details`.ProductID
-join suppliers s on suppliers.SupplierID = products.SupplierID
-WHERE CompanyName = 'Exotic Liquids'
+SELECT customers.Country as pays
+from customers 
+join orders on orders.CustomerID = customers.CustomerID
+join `order details` on `order details`.OrderID = orders.OrderID
+join products on products.ProductID = `order details`.ProductID
+join suppliers on suppliers.SupplierID = products.SupplierID
+WHERE suppliers.CompanyName = 'Exotic Liquids'
+GROUP BY customers.Country;
 
 --7--
-SELECT SUM(UnitPrice * Quantity)
+SELECT SUM(UnitPrice * Quantity) as 'montant ventes 97'
 from `order details`
-join orders o on orders.OrderID = `order details`=OrderID 
-WHERE Year(OrderDate) = 2007;
+join orders on orders.OrderID = `order details`.OrderID 
+where YEAR(OrderDate) = 1997;
 
 --8--
-SELECT MONTH(OrderDate), 
-from orders o 
-join `order details` od on `order details`.OrderID = orders.OrderID 
-GROUP BY OrderDate 
+SELECT MONTH(OrderDate) as 'mois 97', SUM(UnitPrice * Quantity) as 'montant ventes'
+from orders
+join `order details` on `order details`.OrderID = orders.OrderID 
+GROUP BY UnitPrice 
+order by MONTH(OrderDate) ASC 
+--a finir--
 
 --9--
-SELECT OrderDate 
-FROM orders o 
-join customers c on customers.CustomerID = orders.CustomerID
+SELECT OrderDate as 'date de dernière commande'
+FROM orders 
+join customers on customers.CustomerID = orders.CustomerID
 WHERE CompanyName = 'Du monde entier' AND YEAR(OrderDate) = 1998
 
 --10--
-SELECT AVG(DATEDIFF(OrderDate,ShippedDate)) 
-from orders o 
+SELECT AVG(DATEDIFF(OrderDate,ShippedDate)) as 'delai moyen de livraison en jours' 
+from orders

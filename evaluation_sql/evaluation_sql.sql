@@ -57,6 +57,7 @@ join `order details` on `order details`.OrderID = orders.OrderID
 WHERE YEAR(OrderDate) = 1997
 GROUP BY  MONTH(OrderDate)
 order by MONTH(OrderDate) ASC; 
+
 --9--
 SELECT OrderDate as 'date de dernière commande'
 FROM orders 

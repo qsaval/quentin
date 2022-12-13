@@ -23,8 +23,7 @@ WHERE posfou > 70000 AND !(posfou >80000 AND posfou <90000)
 --6--
 SELECT numcom 
 from entcom e 
-WHERE datcom  = '2018-04-23 15:59:51'
-
+WHERE  datcom=
 --7--
 SELECT numcom, datcom
 from entcom e 

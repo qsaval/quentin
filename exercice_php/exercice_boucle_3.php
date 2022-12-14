@@ -11,24 +11,17 @@
             <table>
                 <thead>
                     <?php 
+                        echo "<tr>";
                         echo "<th> x </th>";
                         for($a=0; $a<13; $a++){
                             echo "<th>".$a."</th>";
                         }
+                        echo "</tr>";
                     ?>   
                 </thead> 
                 <tbody>
-                    <tr>
-                        <?php 
-                            $b=0;
-                            echo "<th> 0 </th>";
-                            for($a=0; $a<13; $a++){
-                                echo "<td>".$b."</td>";
-                            }
-                        ?>
-                    </tr>
                     <?php
-                        for($c=1; $c<=12; $c++){
+                        for($c=0; $c<=12; $c++){
                             echo "<tr>"; 
                             echo "<th>".$c."</th>"; 
                             for($a=0; $a<13; $a++){

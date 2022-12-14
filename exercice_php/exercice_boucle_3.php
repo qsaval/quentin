@@ -28,7 +28,6 @@
                         ?>
                     </tr>
                     <?php
-                        $b;
                         for($c=1; $c<=12; $c++){
                             echo "<tr>"; 
                             echo "<th>".$c."</th>"; 

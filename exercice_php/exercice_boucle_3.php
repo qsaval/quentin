@@ -13,7 +13,7 @@
                     <?php 
                         echo "<tr>";
                         echo "<th> x </th>";
-                        for($a=0; $a<13; $a++){
+                        for($a=0; $a<=12; $a++){
                             echo "<th>".$a."</th>";
                         }
                         echo "</tr>";
@@ -24,7 +24,7 @@
                         for($c=0; $c<=12; $c++){
                             echo "<tr>"; 
                             echo "<th>".$c."</th>"; 
-                            for($a=0; $a<13; $a++){
+                            for($a=0; $a<=12; $a++){
                                 $b=$c*$a;
                                 echo "<td>".$b."</td>";
                             }

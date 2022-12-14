@@ -10,7 +10,11 @@ UPDATE vente
 set prix2 = 0, prix2 = prix1 
 
 --3--
+UPDATE entcom
+join fournis on fournis.numfou = entcom.numfou
+set obscom = '*****'
+where fournis.satisf < 5;
 
 --4--
 DELETE FROM produit 
-WHERE 'codart' = 'I110'
+WHERE codart = 'I110'

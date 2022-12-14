@@ -77,7 +77,7 @@ from chambre c
 join hotel h on hot_id=cha_hot_id
 join station s on sta_id=hot_sta_id
 GROUP by sta_id
-
+  
 --15--
 SELECT sta_nom, COUNT(cha_numero)
 from chambre c 

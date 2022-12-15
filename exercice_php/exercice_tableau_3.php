@@ -15,7 +15,6 @@
                     "Normandie" => array("Calvados", "Eure", "Manche", "Orne", "Seine-Maritime")
                 );
 
-                /*----1----*/
                 ksort ($departements);
 
                 foreach($departements as $cle => $valeur) { 

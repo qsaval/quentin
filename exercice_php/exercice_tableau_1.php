@@ -41,7 +41,13 @@
                         echo "<tr>";
                         echo "<td>".$annee[$i]."</td>";
                         echo "<td>".$annee[$annee[$i]]."</td>";
-                        echo "</tr>";
+                        echo "</tr> <br>";
+                    }
+
+                    asort($annee);
+
+                    foreach($annee as $cle => $valeur) { 
+                        echo $cle ." => ".$valeur."<br>";
                     }
                 ?>
             </table> 

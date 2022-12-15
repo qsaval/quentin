@@ -8,8 +8,8 @@
         </head>
         <body>
             <?php 
-                for ($a=0; $a<150; $a++){
-                    echo "Je dois faire des sauvegardes régulière de mes fichiers";
+                for ($a=0; $a<500; $a++){
+                    echo "Je dois faire des sauvegardes régulière de mes fichiers <br>";
                 }
             ?> 
         </body>

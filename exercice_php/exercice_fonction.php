@@ -8,6 +8,7 @@
         </head>
         <body>
             <?php 
+                /*----1----*/
                 function lien($url, $nom){
                     echo "<a href='".$url."'>".$nom."</a>";    
                 }
@@ -16,6 +17,7 @@
 
                 echo"<br>";
 
+                /*----2----*/
                 function somme($tab){
                     $a=0;
                     for($i=0; $i<count($tab); $i++){
@@ -28,8 +30,10 @@
                 $resultat = somme($tab);
                 echo "le resultat est ".$resultat;
 
+                /*----3----*/
                 function complex_password($mdp){
-                    if(preg_match("/^(?=.*[AZ].*[AZ])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[az].*[az].*[az]).{8}$/",$mdp)){
+                    $rgx = "/^\S*(?=\S{8,})(?=\S*[a-z])(?=\S*[A-Z])(?=\S*[\d])\S*$/";
+                    if(preg_match($rgx, $mdp)){
                         return true;
                     }
                     else{
@@ -39,7 +43,7 @@
 
                 echo "<br>";
 
-                $mdp="reeHIUH546ù*";
+                $mdp="sfdFDEF5466";
                 $resultat2= complex_password($mdp);
 
                 if($resultat2){

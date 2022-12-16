@@ -9,14 +9,14 @@
         <body>
             <?php 
                 /*----1----*/
-                $date1 = new DateTime("14-07-2019");
-                echo $date1;
+                /*$date1 = new DateTime("14-07-2019");
+                echo $date1;*/
 
                 /*----2---- 03/02/2023*/
-                $now=date("Y-m-d");
+                /*$now=date("Y-m-d");
                 $fin = new DateTime("2023-02-03");
                 $interval = $now ->diff($fin);
-                echo $interval;
+                echo $interval;*/
                 
                 /*----4----*/
                 $datePattern = "/^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$/";

@@ -28,6 +28,27 @@
                 $resultat = somme($tab);
                 echo "le resultat est ".$resultat;
 
+                function complex_password($mdp){
+                    if(preg_match("/^(?=.*[AZ].*[AZ])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[az].*[az].*[az]).{8}$/",$mdp)){
+                        return true;
+                    }
+                    else{
+                        return false;
+                    }
+                }
+
+                echo "<br>";
+
+                $mdp="reeHIUH546";
+                $resultat2= complex_password($mdp);
+
+                if($resultat2){
+                    echo "vrai";
+                }
+                else{
+                    echo "faux";
+                }
+
             ?> 
         </body>
     </html>

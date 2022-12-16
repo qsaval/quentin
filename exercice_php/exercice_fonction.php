@@ -39,7 +39,7 @@
 
                 echo "<br>";
 
-                $mdp="reeHIUH546";
+                $mdp="reeHIUH546ù*";
                 $resultat2= complex_password($mdp);
 
                 if($resultat2){

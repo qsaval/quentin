@@ -5,14 +5,15 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <form action="" method="post"  name="contact" id="contact" >
+        <form action="exercicef.php" method="get"  name="contact" id="contact" >
             <legend>
                 <h1>Vos coordonnées :</h1>
             </legend>
             <br>
-            <span style="color: red;">
+            <span>
                 *Ces zones sont obligatoires pour envoyer le formulaire
             </span>
             <br>
@@ -20,17 +21,21 @@
                 Société :
             </label>
             <input type="text" name="Société" id="societe"/>
-            <span style="color: red;">
+            <span>
                 *
             </span>
+            <br>
+            <span id="erreursociete"></span>
             <br>
             <label>
                 Personne à contacter :
             </label>
             <input type="text" name="personne" id="personne"/>
-            <span style="color: red;">
+            <span>
                 *
             </span>
+            <br>
+            <span id="erreurnom"></span>
             <br>
             <label>
                 Adresse de l'entreprise :
@@ -41,25 +46,31 @@
                 Code postal :
             </label>
             <input type="text" name="code" id="code"/>
-            <span style="color: red;">
+            <span>
                 *
             </span>
+            <br>
+            <span id="erreurcode"></span>
             <br>
             <label>
                 Ville :
             </label>
             <input type="text" name="ville" id="ville"/>
-            <span style="color: red;">
+            <span>
                 *
             </span>
+            <br>
+            <span id="erreurville"></span>
             <br>
             <label>
                 E-mail :
             </label>
             <input type="email" name="email"/>
-            <span style="color: red;">
+            <span>
                 *
             </span>
+            <br>
+            <span id="erreuremail"></span>
             <br>
             <label>
                 Téléphone :

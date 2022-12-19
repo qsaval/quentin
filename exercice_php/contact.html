@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <form action="exercicef.php" method="get"  name="contact" id="contact" >
+        <form action="exercicef.php" method="get" name="contact" id="contact" >
             <legend>
                 <h1>Vos coordonnées :</h1>
             </legend>
@@ -17,17 +17,15 @@
                 *Ces zones sont obligatoires pour envoyer le formulaire
             </span>
             <br>
-            <label for="Société">
+            <label for="societe">
                 Société :
             </label>
-            <input type="text" name="Société" id="societe"/>
+            <input type="text" name="societe" id="societe"/>
             <span>
                 *
             </span>
             <br>
-            <span id="erreursociete"></span>
-            <br>
-            <label for="personne">
+            <label>
                 Personne à contacter :
             </label>
             <input type="text" name="personne" id="personne"/>
@@ -35,14 +33,12 @@
                 *
             </span>
             <br>
-            <span id="erreurnom"></span>
-            <br>
             <label>
                 Adresse de l'entreprise :
             </label>
             <input type="text" name="adresse"/>
             <br>
-            <label for="code">
+            <label>
                 Code postal :
             </label>
             <input type="text" name="code" id="code"/>
@@ -50,9 +46,7 @@
                 *
             </span>
             <br>
-            <span id="erreurcode"></span>
-            <br>
-            <label for="ville">
+            <label>
                 Ville :
             </label>
             <input type="text" name="ville" id="ville"/>
@@ -60,17 +54,13 @@
                 *
             </span>
             <br>
-            <span id="erreurville"></span>
-            <br>
-            <label for="email">
+            <label>
                 E-mail :
             </label>
             <input type="email" name="email"/>
             <span>
                 *
             </span>
-            <br>
-            <span id="erreuremail"></span>
             <br>
             <label>
                 Téléphone :
@@ -129,7 +119,7 @@
             </select>
             <textarea></textarea>
             <br>
-            <input type="submit" value="Envoyer">
+            <input type="submit" name="envoi" value="Envoyer">
             <input type="reset" value="Effacer">
         </form>
         <script src="exercice.js"></script>

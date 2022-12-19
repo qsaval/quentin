@@ -1,7 +1,6 @@
 document.getElementById("contact").addEventListener("submit",function (e){
 
     var erreur;
-    var erreur1=false;
     var societe=document.getElementById("societe");
     var personne=document.getElementById("personne");
     var ville=document.getElementById("ville");
@@ -12,47 +11,32 @@ document.getElementById("contact").addEventListener("submit",function (e){
     var d=/^[0-9]+$/;
 
     if(societe.value==""){
-        erreur=document.getElementById("erreursociete");
-        erreur.innerHTML="entrez la nom de société s.v.p";
-        erreur1=true;
+        erreur="entrez la nom de société s.v.p";
     }
     if(personne.value==""){
-        erreur=document.getElementById("erreurnom");
-        erreur.innerHTML="entrez le nom de la personne a contact s.v.p";
-        erreur1=true;
+        erreur="entrez le nom de la personne a contact s.v.p";
     }
     if(ville.value==""){
-        erreur=document.getElementById("erreurville");
-        erreur.innerHTML="entrez le nom de la ville de l'entreprise s.v.p";
-        erreur1=true;
+        erreur="entrez le nom de la ville de l'entreprise s.v.p";
     }    
     if(code.value.length<5 && code.value.length>0){
-        erreur=document.getElementById("erreurcode");
-        erreur.innerHTML="entrez le code postal sur 5 chiffre s.v.p";
-        erreur1=true;
+        erreur="entrez le code postal sur 5 chiffre s.v.p";
     }
-    if(!a.test(email)){
-        erreur=document.getElementById("erreuremail");
-        erreur.innerHTML="entrez email de entreprise societe s.v.p";
-        erreur1=true;
+    if(a.test(email)){
+        erreur="entrez email de entreprise societe s.v.p";
     }
     if(!c.test(personne.value)){
-        erreur=document.getElementById("erreurnom");
-        erreur.innerHTML="entrez le nom de la personne a contact s.v.p";
-        erreur1=true;
+        erreur="entrez le nom de la personne a contact s.v.p";
     }
     if(!c.test(ville.value)){
-        erreur=document.getElementById("erreurville");
-        erreur.innerHTML="entrez le nom de la ville de l'entreprise s.v.p";
-        erreur1=true;
+        erreur="entrez le nom de la ville de l'entreprise s.v.p";
     }
     if(!d.test(code.value)){
-        erreur=document.getElementById("erreurcode");
-        erreur.innerHTML="entrez le code postal sur 5 chiffre s.v.p";
-        erreur1=true;
+        erreur="entrez le code postal sur 5 chiffre s.v.p";
     }
-    if(erreur1){
+    if(erreur){
         e.preventDefault();
+        alert(erreur);
         return false;
     }
     else{

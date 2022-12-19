@@ -31,7 +31,7 @@ document.getElementById("contact").addEventListener("submit",function (e){
         erreur.innerHTML="entrez le code postal sur 5 chiffre s.v.p";
         erreur1=true;
     }
-    if(a.test(email)){
+    if(!a.test(email)){
         erreur=document.getElementById("erreuremail");
         erreur.innerHTML="entrez email de entreprise societe s.v.p";
         erreur1=true;

@@ -1,3 +1,7 @@
 <?php 
-    echo $_REQUEST["societe"];
+    $_REQUEST["Société"];
+    $_REQUEST["personne"];
+    $_REQUEST["code"];
+    $_REQUEST["ville"];
+    $_REQUEST["email"]
 ?> 

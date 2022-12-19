@@ -25,7 +25,7 @@
                 *
             </span>
             <br>
-            <label>
+            <label for="personne">
                 Personne à contacter :
             </label>
             <input type="text" name="personne" id="personne"/>
@@ -33,12 +33,12 @@
                 *
             </span>
             <br>
-            <label>
+            <label for="adresse">
                 Adresse de l'entreprise :
             </label>
             <input type="text" name="adresse"/>
             <br>
-            <label>
+            <label for="code">
                 Code postal :
             </label>
             <input type="text" name="code" id="code"/>
@@ -46,7 +46,7 @@
                 *
             </span>
             <br>
-            <label>
+            <label for="ville">
                 Ville :
             </label>
             <input type="text" name="ville" id="ville"/>
@@ -54,7 +54,7 @@
                 *
             </span>
             <br>
-            <label>
+            <label for="email">
                 E-mail :
             </label>
             <input type="email" name="email"/>
@@ -62,12 +62,12 @@
                 *
             </span>
             <br>
-            <label>
+            <label for="telephone">
                 Téléphone :
             </label>
-            <input type="text" name="téléphone"/>
+            <input type="text" name="telephone"/>
             <br>
-            <label>
+            <label for="projet">
                 Sélectionnez l'environnement technique du projet :
             </label>
             <select name="projet">

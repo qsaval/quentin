@@ -5,6 +5,10 @@
     $v = $_REQUEST["ville"];
     $e = $_REQUEST["email"];
 
-    echo $_REQUEST['societe'];
-    
+    echo "la societe $s <br>";
+    echo "mr $p <br>";
+    echo "pc: $c <br>";
+    echo "ville: $v <br>";
+    echo "email: $e";
+
 ?> 

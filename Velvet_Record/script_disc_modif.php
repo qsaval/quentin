@@ -71,7 +71,7 @@
 
     try {
         // Construction de la requête UPDATE sans injection SQL :
-        $requete = $db->prepare("UPDATE disc join artist on  artist.artist_id = disc.artist_id SET disc_title = :titre, artist_name = :nom, disc_year = :annee, disc_genre = :genre, disc_label = :label, disc_price = :price, disc_picture = :image WHERE disc_id = :id;");
+        $requete = $db->prepare("UPDATE disc join artist on  artist.artist_id = disc.artist_id SET disc_title = :titre, artist_id = :nom, disc_year = :annee, disc_genre = :genre, disc_label = :label, disc_price = :price, disc_picture = :image WHERE disc_id = :id;");
         $requete->bindValue(":id", $id, PDO::PARAM_INT);
         $requete->bindValue(":titre", $titre, PDO::PARAM_STR);
         $requete->bindValue(":nom", $nom, PDO::PARAM_STR);

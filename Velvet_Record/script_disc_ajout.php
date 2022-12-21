@@ -52,7 +52,8 @@
     if ($titre == Null || $nom == Null || $annee == null || $genre == null || $label == null || $price == null || $image == null) {
         header("Location: disc_new.php");
         exit;
-    }
+    }file:///home/stagiaire/T%C3%A9l%C3%A9chargements/record.sql
+
 
 
     require "db.php"; 
@@ -61,7 +62,7 @@
 
     try {
         
-        $requete = $db->prepare("INSERT INTO disc (disc_title, disc_year, disc_picture, disc_label, disc_genre, disc_price) VALUES (:titre, :annee, :image, :label, :genre, :price, :nom);");
+        $requete = $db->prepare("INSERT INTO disc (disc_title, disc_year, disc_picture, disc_label, disc_genre, disc_price, artist_id) VALUES (:titre, :annee, :image, :label, :genre, :price, :nom);");
     
         $requete->bindValue(":titre", $titre, PDO::PARAM_STR);
         $requete->bindValue(":annee", $annee, PDO::PARAM_STR);

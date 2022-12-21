@@ -56,16 +56,16 @@
             <input type="text" name="annee"  value="<?= $disc->disc_year ?>" class="form-control">
             <br><br>
 
-            <label for="nom" class="form-label"> Genre</label><br>
-            <input type="text" name="nom"  value="<?= $disc->disc_genre ?>" class="form-control">
+            <label for="genre" class="form-label"> Genre</label><br>
+            <input type="text" name="genre"  value="<?= $disc->disc_genre ?>" class="form-control">
             <br><br>
 
             <label for="label" class="form-label"> Label</label><br>
             <input type="text" name="label"  value="<?= $disc->disc_label ?>" class="form-control">
             <br><br>
 
-            <label for="nom" class="form-label"> Price</label><br>
-            <input type="text" name="nom"  value="<?= $disc->disc_price ?>" class="form-control">
+            <label for="price" class="form-label"> Price</label><br>
+            <input type="text" name="price"  value="<?= $disc->disc_price ?>" class="form-control">
             <br><br>
 
             <label for="image" class="form-label">Picture</label><br>

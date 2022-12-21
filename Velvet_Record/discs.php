@@ -28,7 +28,7 @@
         <?php foreach ($tableau as $disc): ?>
             <div class="d-flex ">
                 <div class="d-inline p-2" >
-                    <img src="jaquettes/<?= $disc->disc_title ?>.jpeg" alt="">
+                    <img src="jaquettes/<?= $disc->disc_picture ?>" alt="">
                 </div>
                 <div>
                     <h2><?= $disc->disc_title ?></h2>

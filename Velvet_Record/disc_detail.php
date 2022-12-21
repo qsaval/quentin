@@ -37,7 +37,7 @@
             <p class="ps-3">Price: <?= $disc->disc_price ?></p>
         </div>
         <p class="ps-3">Picture</p>
-        <img src="jaquettes/<?= $disc->disc_title?>.jpeg" alt="" class="ps-3"><br><br>
+        <img src="jaquettes/<?= $disc->disc_picture?>" alt="" class="ps-3"><br><br>
 
         <a href="disc_form.php?id=<?= $disc->disc_id ?>"><button type="button" class="btn btn-primary"> Modifier </button></a>
         <a href="script_disc_delete.php?id=<?= $disc->disc_id ?>"><button type="button" class="btn btn-primary"> Supprimer </button></a>

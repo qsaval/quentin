@@ -74,7 +74,7 @@
             <br><br>
 
             <input type="submit" value="Modifier" class="btn btn-primary">
-            <a href="disc_detail.php"><button type="button" class="btn btn-primary">Retour</button></a>
+            <a href="disc_detail.php?id=<?= $disc->disc_id ?>"><button type="button" class="btn btn-primary">Retour</button></a>
 
         </form>
     </div>

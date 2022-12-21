@@ -88,6 +88,6 @@
         die("Fin du script (script_disc_modif.php)");
     }
 
-    header("Location: disc_detail.php?id=" . $id);
+    header("Location: disc_detail.php?id= $id");
     exit;
 ?>

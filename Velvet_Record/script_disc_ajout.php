@@ -61,7 +61,7 @@
 
     try {
         
-        $requete = $db->prepare("INSERT INTO disc (disc_title, disc_year, disc_picture, disc_label, disc_genre, disc_price) VALUES (:titre, :annee, :image, :label, :genre, :price);");
+        $requete = $db->prepare("INSERT INTO disc (disc_title, disc_year, disc_picture, disc_label, disc_genre, disc_price) VALUES (:titre, :annee, :image, :label, :genre, :price, :nom);");
     
         $requete->bindValue(":titre", $titre, PDO::PARAM_STR);
         $requete->bindValue(":annee", $annee, PDO::PARAM_STR);
@@ -69,13 +69,8 @@
         $requete->bindValue(":label", $label, PDO::PARAM_STR);
         $requete->bindValue(":genre", $genre, PDO::PARAM_STR);
         $requete->bindValue(":price", $price, PDO::PARAM_STR);
-
-        $requete = $db->prepare("INSERT INTO artist (artist_name, artist_url) VALUES (:nom, :url);");
-
-        $requete->bindValue(":url", $url, PDO::PARAM_STR);
         $requete->bindValue(":nom", $nom, PDO::PARAM_STR);
 
-    
         $requete->execute();
     
         $requete->closeCursor();

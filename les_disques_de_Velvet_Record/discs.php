@@ -24,25 +24,24 @@
         <h1>Liste des disque(15)</h1>
         <a href="disc_new.php"><button type="button" class="btn btn-primary">Ajouter</button></a>
     </header>
-    <div>
-    <div class="d-inline p-2" >    
-    <?php foreach ($tableau as $disc): ?>
-        <div class="d-flex">
-            <div class="d-inline p-2" >
-                <img src="jaquettes/<?= $disc->disc_title ?>.jpeg" alt="">
-            </div>
-            <div>
-                <h2><?= $disc->disc_title ?></h2>
-                <h3><?= $disc->artist_name ?></h3>
-                <p>Label: <?= $disc->disc_label ?></p>
-                <p>Year: <?= $disc->disc_year ?></p>
-                <p>Genre: <?= $disc->disc_genre ?></p>
+    <div class="d-inline p-2 " >    
+        <?php foreach ($tableau as $disc): ?>
+            <div class="d-flex ">
+                <div class="d-inline p-2" >
+                    <img src="jaquettes/<?= $disc->disc_title ?>.jpeg" alt="">
+                </div>
+                <div>
+                    <h2><?= $disc->disc_title ?></h2>
+                    <h3><?= $disc->artist_name ?></h3>
+                    <p>Label: <?= $disc->disc_label ?></p>
+                    <p>Year: <?= $disc->disc_year ?></p>
+                    <p>Genre: <?= $disc->disc_genre ?></p>
 
-                <a href="disc_detail.php?id=<?= $artist->artist_id ?>"><button type="button" class="btn btn-primary">Détail</button></a>
+                    <a href="disc_detail.php?id=<?= $disc->disc_id ?>"><button type="button" class="btn btn-primary">Détail</button></a>
+                </div>
             </div>
-        </div>
-    <?php endforeach; ?>
+        <?php endforeach; ?>
     </div>
-    </div>
+    
 </body>
 </html>

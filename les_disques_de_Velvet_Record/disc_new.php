@@ -38,12 +38,12 @@
             <input type="text" name="label" placeholder="Enter label (EMI, Warner, PolyGram, Universale...)" class="form-control">
             <br><br>
 
-            <label for="label" class="form-label">price</label><br>
-            <input type="text" name="label" class="form-control">
+            <label for="price" class="form-label">Price</label><br>
+            <input type="text" name="price" class="form-control">
             <br><br>
 
             <label for="image" class="form-label">Picture</label><br>
-            <button><input type="file" name="image"  class="form-control"></button>
+            <input type="file" name="image" class="form-control"> 
             <br><br>
 
             <input type="submit" value="Ajouter" class="btn btn-primary">

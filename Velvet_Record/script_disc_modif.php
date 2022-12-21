@@ -64,11 +64,10 @@
 
 
     try {
-        // Construction de la requête UPDATE sans injection SQL :
         $requete = $db->prepare("UPDATE disc SET disc_title = :titre,  disc_year = :annee, disc_genre = :genre, disc_label = :label, disc_price = :price, disc_picture = :image WHERE disc_id = :id;");
         $requete->bindValue(":id", $id, PDO::PARAM_INT);
         $requete->bindValue(":titre", $titre, PDO::PARAM_STR);
-        $requete->bindValue(":annee", $annee, PDO::PARAM_STR);
+        $requete->bindValue(":annee", $annee, PDO::PARAM_INT);
         $requete->bindValue(":genre", $genre, PDO::PARAM_STR);
         $requete->bindValue(":label", $label, PDO::PARAM_STR);
         $requete->bindValue(":price", $price, PDO::PARAM_STR);

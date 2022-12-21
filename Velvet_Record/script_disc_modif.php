@@ -53,21 +53,21 @@
         header("Location: discs.php");
     }
     elseif ($titre == Null || $nom == Null || $annee == null || $genre == null || $label == null || $price == null || $image == null) {
-        header("Location: disc_form.php?id=".$id);
+        header("Location: disc_form.php?id=$id");
         exit;
     }
 
-    echo $id;
+    echo $image;
 
     require "db.php"; 
     $db = connexionBase();
 
 
     try {
-        $requete = $db->prepare("UPDATE disc SET disc_title = :titre,  disc_year = :annee, disc_genre = :genre, disc_label = :label, disc_price = :price, disc_picture = :image WHERE disc_id = :id;");
-        $requete->bindValue(":id", $id, PDO::PARAM_INT);
+        $requete = $db->prepare("UPDATE disc SET (disc_title = :titre,  disc_year = :annee, disc_genre = :genre, disc_label = :label, disc_price = :price, disc_picture = :image) WHERE disc_id = :id;");
+        $requete->bindValue(":id", $id, PDO::PARAM_STR);
         $requete->bindValue(":titre", $titre, PDO::PARAM_STR);
-        $requete->bindValue(":annee", $annee, PDO::PARAM_INT);
+        $requete->bindValue(":annee", $annee, PDO::PARAM_STR);
         $requete->bindValue(":genre", $genre, PDO::PARAM_STR);
         $requete->bindValue(":label", $label, PDO::PARAM_STR);
         $requete->bindValue(":price", $price, PDO::PARAM_STR);
@@ -82,6 +82,6 @@
         die("Fin du script (script_disc_modif.php)");
     }
 
-    header("Location: disc_detail.php?id=" . $id);
+    header("Location: disc_detail.php?id=$id");
     exit;
 ?>

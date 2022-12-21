@@ -15,13 +15,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDO - Liste</title>
+    <title>Velvet Record</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 <body>
     <header class="d-flex justify-content-between">
-        <h1>Liste des disque(15)</h1>
+        <h1>Liste des disque (15)</h1>
         <a href="disc_new.php"><button type="button" class="btn btn-primary">Ajouter</button></a>
     </header>
     <div class="d-inline p-2 " >    
@@ -32,7 +32,7 @@
                 </div>
                 <div>
                     <h2><?= $disc->disc_title ?></h2>
-                    <h3><?= $disc->artist_name ?></h3>
+                    <h3 class="fs-5"><?= $disc->artist_name ?></h3>
                     <p>Label: <?= $disc->disc_label ?></p>
                     <p>Year: <?= $disc->disc_year ?></p>
                     <p>Genre: <?= $disc->disc_genre ?></p>

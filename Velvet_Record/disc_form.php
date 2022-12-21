@@ -36,8 +36,20 @@
             <input type="text" name="titre" value="<?= $disc->disc_title ?>" class="form-control">
             <br><br>
 
-            <label for="nom" class="form-label"> Artist</label><br>
-            <input type="text" name="nom"  value="<?= $disc->artist_name ?>" class="form-control">
+            <label for="nom" class="form-label">Artist</label><br>
+            <select class="form-select" name="nom">
+                    <option selected value="<?= $disc->artist_id ?>"> <?= $disc->artist_name ?> </option>
+                    <option value="1"> Neil Young </option>
+                    <option value="2"> Yes </option>
+                    <option value="3"> Rolling Stones </option>
+                    <option value="4"> Queen of the Stones Age </option>
+                    <option value="5"> Serge Gainsbourg </option>
+                    <option value="6"> AC/DC </option>
+                    <option value="7"> Marillion </option>
+                    <option value="8"> Bob Dylan </option>
+                    <option value="9"> Fleshtones </option>
+                    <option value="10"> The Clash </option>
+            </select>
             <br><br>
 
             <label for="annee" class="form-label"> Year</label><br>

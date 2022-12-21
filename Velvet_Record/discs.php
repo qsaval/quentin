@@ -31,11 +31,11 @@
                     <img src="jaquettes/<?= $disc->disc_picture ?>" alt="">
                 </div>
                 <div>
-                    <h2><?= $disc->disc_title ?></h2>
-                    <h3 class="fs-5"><?= $disc->artist_name ?></h3>
-                    <p>Label: <?= $disc->disc_label ?></p>
-                    <p>Year: <?= $disc->disc_year ?></p>
-                    <p>Genre: <?= $disc->disc_genre ?></p>
+                    <h2 class="fs-2"><?= $disc->disc_title ?></h2>
+                    <h3 class="fs-4"><?= $disc->artist_name ?></h3>
+                    <p><b>Label:</b> <?= $disc->disc_label ?></p>
+                    <p><b>Year:</b> <?= $disc->disc_year ?></p>
+                    <p><b>Genre:</b> <?= $disc->disc_genre ?></p>
 
                     <a href="disc_detail.php?id=<?= $disc->disc_id ?>"><button type="button" class="btn btn-primary">Détail</button></a>
                 </div>

@@ -13,6 +13,13 @@
         $titre = Null;
     }
 
+    if (isset($_POST['nom']) && $_POST['nom'] != "") {
+        $nom = $_POST['nom'];
+    }
+    else {
+        $nom = Null;
+    }
+
     if (isset($_POST['annee']) && $_POST['annee'] != "") {
         $annee = $_POST['annee'];
     }
@@ -53,20 +60,19 @@
         header("Location: discs.php");
     }
     elseif ($titre == Null || $nom == Null || $annee == null || $genre == null || $label == null || $price == null || $image == null) {
-        header("Location: disc_form.php?id=$id");
+        header("Location: disc_form.php?id=".$id);
         exit;
     }
-
-    echo $image;
 
     require "db.php"; 
     $db = connexionBase();
 
 
     try {
-        $requete = $db->prepare("UPDATE disc SET (disc_title = :titre,  disc_year = :annee, disc_genre = :genre, disc_label = :label, disc_price = :price, disc_picture = :image) WHERE disc_id = :id;");
-        $requete->bindValue(":id", $id, PDO::PARAM_STR);
+        $requete = $db->prepare("UPDATE disc join artist on  artist.artist_id = disc.artist_id SET disc_title = :titre, artist_id = :nom, disc_year = :annee, disc_genre = :genre, disc_label = :label, disc_price = :price, disc_picture = :image WHERE disc_id = :id;");
+        $requete->bindValue(":id", $id, PDO::PARAM_INT);
         $requete->bindValue(":titre", $titre, PDO::PARAM_STR);
+        $requete->bindValue(":nom", $nom, PDO::PARAM_STR);
         $requete->bindValue(":annee", $annee, PDO::PARAM_STR);
         $requete->bindValue(":genre", $genre, PDO::PARAM_STR);
         $requete->bindValue(":label", $label, PDO::PARAM_STR);
@@ -82,6 +88,6 @@
         die("Fin du script (script_disc_modif.php)");
     }
 
-    header("Location: disc_detail.php?id=$id");
+    header("Location: disc_detail.php?id=" . $id);
     exit;
 ?>

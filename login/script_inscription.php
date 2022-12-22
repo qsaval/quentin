@@ -42,6 +42,8 @@
         exit;
     }
 
+    $hmdp = password_hash($mdp, PASSWORD_DEFAULT);
+
     require "db.php"; 
     $db = connexionBase();
 
@@ -52,7 +54,7 @@
         $requete->bindValue(":nom", $nom, PDO::PARAM_STR);
         $requete->bindValue(":prenom", $prenom, PDO::PARAM_STR);
         $requete->bindValue(":login", $login, PDO::PARAM_STR);
-        $requete->bindValue(":mdp", $mdp, PDO::PARAM_STR);
+        $requete->bindValue(":mdp", $hmdp, PDO::PARAM_STR);
 
         $requete->execute();
     

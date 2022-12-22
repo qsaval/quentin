@@ -52,7 +52,7 @@
     if ($titre == Null || $nom == Null || $annee == null || $genre == null || $label == null || $price == null || $image == null) {
         header("Location: disc_new.php");
         exit;
-    }file:///home/stagiaire/T%C3%A9l%C3%A9chargements/record.sql
+    }
 
 
 

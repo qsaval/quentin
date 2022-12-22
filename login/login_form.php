@@ -8,9 +8,9 @@
 </head>
 <body>
     <form action="login_script.php" method="post">
-        <label for="login"> Email</label>
+        <label for="login"> Email :</label>
         <input type="text" name="login"><br>
-        <label for="mdp">Mot de passe</label>
+        <label for="mdp">Mot de passe :</label>
         <input type="password" name="mdp"><br>
 
         <input type="submit" value="Valider" >

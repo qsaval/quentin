@@ -15,7 +15,7 @@
 
         <input type="submit" value="Valider" >
         <input type="reset" value="Annuler"><br>
-        <a href="login_form_inscription.php"><buttton type="button"> inscription </button></a>
+        <buttton type="button"> <a href="login_form_inscription.php"> inscription </a></button>
     </form>
 </body>
 </html>

@@ -8,7 +8,8 @@ SELECT numcom, numfou
 from entcom e 
 
 --3--
-
+SELECT numfou, numcom
+FROM entcom
 
 --4--
 SELECT codart, libart, stkale, qteann 
@@ -38,7 +39,10 @@ order by numcom DESC;
 
 
 --10--
-
+SELECT nomfou,numcom
+FROM fournis
+JOIN entcom on entcom.numfou = fournis.numfou
+GROUP BY numcom
 
 --11--
 

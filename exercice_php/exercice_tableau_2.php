@@ -90,10 +90,19 @@
 
                 /*----3----*/
                 $n = count($capitales);
-                echo "il y a ".$n." de pays";
+                echo "il y a ".$n." de pays <br><br>";
 
                 /*----4----*/
-
+                for($i=0; $i<=count($capitales)-1; $i++){
+                    $r=$capitales[$i];
+                   $c= str_split($r);
+                   if ($c[0]=="B"){
+                        $capitales[$i]="";
+                   }
+                }
+                foreach($capitales as $cle => $valeur) { 
+                    echo $cle." : ".$valeur."<br>"; 
+                }
                 ?>
             </table> 
         </body>

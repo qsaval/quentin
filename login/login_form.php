@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>connexion</h1>
     <form action="login_script.php" method="post">
         <label for="login"> Email :</label>
         <input type="text" name="login"><br>

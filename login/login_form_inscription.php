@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>inscription</h1>
     <form action="script_inscription.php" method="post">
         <label for="nom">Nom</label>
         <input type="text" name="nom"><br>

@@ -16,5 +16,6 @@ set obscom = '*****'
 where fournis.satisf < 5;
 
 --4--
-DELETE FROM produit 
-WHERE codart = 'I110'
+DELETE FROM `produit` WHERE codart = 'I110';
+DELETE FROM `vente` WHERE codart = 'I110';
+DELETE FROM `ligcom` WHERE codart = 'I110';

@@ -23,6 +23,8 @@
 
         <input type="submit" value="Valider" >
         <input type="reset" value="Annuler">
+        <br>
+        <a href="login_form.php"> retour </a>
     </form>
 </body>
 </html>

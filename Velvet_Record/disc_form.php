@@ -69,8 +69,8 @@
             <br><br>
 
             <label for="image" class="form-label">Picture</label><br>
-            <input type="file" name="image" class="form-control" value="<?= $disc->disc_picture ?>"> 
-            <img src="jaquettes/<?= $disc->disc_picture ?>" alt="">
+            <input type="file" name="image"><br> 
+            <img src="jaquettes/<?= $disc->disc_picture ?>" alt="<?= $disc->disc_title ?>">
             <br><br>
 
             <input type="submit" value="Modifier" class="btn btn-primary">

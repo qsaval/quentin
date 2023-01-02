@@ -54,7 +54,7 @@
             <br><br>
 
             <label for="image" class="form-label">Picture</label><br>
-            <input type="file" name="image" class="form-control"> 
+            <input type="file" name="image"> 
             <br><br>
 
             <input type="submit" value="Ajouter" class="btn btn-primary">

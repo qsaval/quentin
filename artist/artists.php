@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<table>
+    <table>
         <tr>
             <th>ID</th>
             <th>Nom</th>
@@ -41,7 +41,7 @@
             <td><a href="artist_detail.php?id=<?= $artist->artist_id ?>">Détail</a></td>
         </tr>
         <?php endforeach; ?>
-
     </table>
+    <a href="artist_new.php">Ajouter</a>
 </body>
 </html>

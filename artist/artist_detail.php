@@ -27,9 +27,9 @@
         <title>PDO - Détail</title>
     </head>
     <body>
-        Artiste N°<?php echo $myArtist->artist_id ?>
+        Artiste N°<?php echo $myArtist->artist_id ?><br>
         Nom de l'artiste : <?= $myArtist->artist_name ?>
-        Site Internet : <?= $myArtist->artist_url ?>
+        Site Internet : <?= $myArtist->artist_url ?><br>
         <a href="artist_form.php?id=<?= $myArtist->artist_id ?>">Modifier</a>
         <a href="script_artist_delete.php?id=<?= $myArtist->artist_id ?>">Supprimer</a>
     </body>

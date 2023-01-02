@@ -50,7 +50,7 @@
             <br><br>
 
             <label for="price" class="form-label">Price</label><br>
-            <input type="text" name="price" class="form-control">
+            <input type="text" name="price" class="form-control" placeholder="Enter le prix">
             <br><br>
 
             <label for="image" class="form-label">Picture</label><br>

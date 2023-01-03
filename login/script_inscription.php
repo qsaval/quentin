@@ -68,7 +68,7 @@
         die("Fin du script (script_inscription.php)");
     }
 
-    header("Location: login_form.php");
+    header("Location: login_form_connexion.php");
 
     exit;
 ?>

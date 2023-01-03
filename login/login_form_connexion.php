@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>Connexion</h1>
-    <form action="login_script.php" method="post">
+    <form action="script_connexion.php" method="post">
         <div class="mb-3">
             <label for="login" class="form-label"> Email :</label>
             <input type="text" name="login" class="form-control"><br>

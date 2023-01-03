@@ -18,6 +18,6 @@
             exit;
         }
     }
-    header("Location: login_form.php");
+    header("Location: login_form_connexion.php");
     exit;
 ?>

@@ -25,16 +25,34 @@
     <body>
         <h1>Details</h1>
         <div class="d-flex align-items-center">
-            <p class="ps-3">Title: <?php echo $disc->disc_title ?></p>
-            <p class="ps-3">Artiste: <?= $disc->artist_name ?></p>
+            <div class="ps-3">
+                <p>Title:</p> 
+                <p class="shadow-none p-3 bg-secondary rounded bg-opacity-25"><?php echo $disc->disc_title ?></p>
+            </div>
+            <div class="ps-3">
+                <p>Artiste:</p>
+                <p class="shadow-none p-3 bg-secondary rounded bg-opacity-25"> <?= $disc->artist_name ?></p>
+            </div>   
         </div>
         <div class="d-flex align-items-center">
-            <p class="ps-3">Year: <?= $disc->disc_year ?></p>
-            <p class="ps-3">Genre: <?= $disc->disc_genre ?></p>
+            <div class="ps-3">
+                <p>Year:</p>
+                <p class="shadow-none p-3 bg-secondary rounded bg-opacity-25"><?= $disc->disc_year ?></p>
+            </div>  
+            <div class="ps-3">
+                <p>Genre:</p>
+                <p class="shadow-none p-3 bg-secondary rounded bg-opacity-25"><?= $disc->disc_genre ?></p>
+            </div>   
         </div>
         <div class="d-flex align-items-center">
-            <p class="ps-3">Label: <?= $disc->disc_label ?></p>
-            <p class="ps-3">Price: <?= $disc->disc_price ?></p>
+            <div class="ps-3">
+                <p>Label:</p>
+                <p class="shadow-none p-3 bg-secondary rounded bg-opacity-25"><?= $disc->disc_label ?></p>
+            </div>  
+            <div class="ps-3">
+                <p>Price:</p> 
+                <p class="shadow-none p-3 bg-secondary rounded bg-opacity-25"><?= $disc->disc_price ?></p>
+            </div>   
         </div>
         <p class="ps-3">Picture</p>
         <img src="jaquettes/<?= $disc->disc_picture?>" alt="<?= $disc->disc_title?>" class="ps-3"><br><br>

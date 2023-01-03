@@ -104,7 +104,7 @@
 
                 foreach ($capitales as $cle => $valeur) {
                     if(substr($cle,0,1) != "B"){
-                    echo $cle.'=>'.$valeur.'<br>';
+                        echo $cle.'=>'.$valeur.'<br>';
                     }
                 }
                 ?>

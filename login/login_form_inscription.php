@@ -27,7 +27,7 @@
         <input type="submit" value="Valider" class="btn btn-secondary">
         <input type="reset" value="Annuler" class="btn btn-secondary">
         <br><br>
-        <a href="login_form.php" class="btn btn-secondary"> retour </a>
+        <a href="login_form.php" class="btn btn-secondary"> Retour </a>
     </form>
 </body>
 </html>

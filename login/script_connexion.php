@@ -5,7 +5,7 @@
     include "db.php";
     $db = connexionBase();
 
-    $requete = $db->query("SELECT * FROM user");
+    $requete = $db->query("SELECT * FROM user WHERE user_mail = '".$login."'");
     $tableau = $requete->fetchAll(PDO::FETCH_OBJ);
     $requete->closeCursor();
 

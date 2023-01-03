@@ -71,33 +71,41 @@
                 );
                 
                 /*----1----*/
+                echo "Question 1:<br><br>";
+
+
                 ksort($capitales);
 
                 foreach($capitales as $cle => $valeur) { 
-                    echo $cle." : ".$valeur."<br>"; 
+                    echo $cle." => ".$valeur."<br>"; 
                 }
 
                 echo "<br>";
 
                 /*----2----*/
+                echo "Question 2:<br><br>";
+
                 asort($capitales);
 
                 foreach($capitales as $cle1 => $valeur1) { 
-                    echo $cle1." : ".$valeur1."<br>"; 
+                    echo $cle1." => ".$valeur1."<br>"; 
                 }
 
                 echo "<br>";
 
                 /*----3----*/
+                echo "Question 3:<br><br>";
+
                 $n = count($capitales);
                 echo "il y a ".$n." de pays <br><br>";
 
                 /*----4----*/
+                echo "Question 4:<br><br>";
+
                 foreach ($capitales as $cle => $valeur) {
-                    if(substr($valeur,0,1) == "B"){
-                        unset($valeur);
+                    if(substr($cle,0,1) != "B"){
+                    echo $cle.'=>'.$valeur.'<br>';
                     }
-                    echo $valeur.'';
                 }
                 ?>
             </table> 

@@ -57,8 +57,8 @@
         <p class="ps-3">Picture</p>
         <img src="jaquettes/<?= $disc->disc_picture?>" alt="<?= $disc->disc_title?>" class="ps-3"><br><br>
 
-        <a href="disc_form.php?id=<?= $disc->disc_id ?>"><button type="button" class="btn btn-primary"> Modifier </button></a>
-        <a href="script_disc_delete.php?id=<?= $disc->disc_id ?>"><button type="button" class="btn btn-primary"> Supprimer </button></a>
-        <a href="discs.php"><button type="button" class="btn btn-primary"> Retour </button></a>
+        <a href="disc_form.php?id=<?= $disc->disc_id ?>" class="btn btn-primary"> Modifier </a>
+        <a href="script_disc_delete.php?id=<?= $disc->disc_id ?>" class="btn btn-primary confirmation"> Supprimer </a>
+        <a href="discs.php" class="btn btn-primary">Retour</a>
     </body>
 </html>

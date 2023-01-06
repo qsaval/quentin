@@ -1,3 +1,14 @@
+<?php
+    include "db.php";
+    $db = connexionBase();
+
+    $requete = $db->query("SELECT * FROM artist");
+    $tableau = $requete->fetchAll(PDO::FETCH_OBJ);
+    $requete->closeCursor();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -24,16 +35,11 @@
 
             <label for="nom" class="form-label">Artist</label><br>
             <select class="form-select" name="nom">
-                    <option value="1"> Neil Young </option>
-                    <option value="2"> Yes </option>
-                    <option value="3"> Rolling Stones </option>
-                    <option value="4"> Queen of the Stones Age </option>
-                    <option value="5"> Serge Gainsbourg </option>
-                    <option value="6"> AC/DC </option>
-                    <option value="7"> Marillion </option>
-                    <option value="8"> Bob Dylan </option>
-                    <option value="9"> Fleshtones </option>
-                    <option value="10"> The Clash </option>
+                <?php foreach($tableau as $artist):?>
+
+                    <option value="<?= $artist->artist_id ?>"> <?= $artist-> artist_name ?> </option>
+
+                <?php endforeach; ?>
             </select>
             <br><br>
 

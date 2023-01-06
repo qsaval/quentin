@@ -4,7 +4,9 @@
     $requete = $db->prepare("SELECT * FROM disc join artist on artist.artist_id = disc.artist_id WHERE disc_id=?");
     $requete->execute(array($_GET["id"]));
     $disc = $requete->fetch(PDO::FETCH_OBJ);
-    $requete->closeCursor();
+    $requete = $db->query("SELECT * FROM artist");
+    $tableau = $requete->fetchAll(PDO::FETCH_OBJ);
+    $requete->closeCursor();;
 ?>
 
 <!DOCTYPE html>
@@ -39,16 +41,11 @@
             <label for="nom" class="form-label">Artist</label><br>
             <select class="form-select" name="nom">
                     <option selected value="<?= $disc->artist_id ?>"> <?= $disc->artist_name ?> </option>
-                    <option value="1"> Neil Young </option>
-                    <option value="2"> Yes </option>
-                    <option value="3"> Rolling Stones </option>
-                    <option value="4"> Queen of the Stones Age </option>
-                    <option value="5"> Serge Gainsbourg </option>
-                    <option value="6"> AC/DC </option>
-                    <option value="7"> Marillion </option>
-                    <option value="8"> Bob Dylan </option>
-                    <option value="9"> Fleshtones </option>
-                    <option value="10"> The Clash </option>
+                    <?php foreach($tableau as $artist):?>
+
+                    <option value="<?= $artist->artist_id ?>"> <?= $artist-> artist_name ?> </option>
+                    
+                    <?php endforeach; ?>
             </select>
             <br><br>
 

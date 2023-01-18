@@ -21,7 +21,7 @@
 </head>
 <body>
     <header class="d-flex justify-content-between">
-        <h1>Liste des disque (15)</h1>
+        <h1>Liste des disque (<?php echo count($tableau) ?>)</h1>
         <a href="disc_new.php"><button type="button" class="btn btn-primary">Ajouter</button></a>
     </header>
     <div class="d-inline p-2 " >    

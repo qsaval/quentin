@@ -62,7 +62,8 @@ order by MONTH(OrderDate) ASC;
 SELECT OrderDate as 'date de dernière commande'
 FROM orders 
 join customers on customers.CustomerID = orders.CustomerID
-WHERE CompanyName = 'Du monde entier' AND YEAR(OrderDate) = 1998;
+WHERE CompanyName = 'Du monde entier' AND YEAR(OrderDate) = 1998
+GROUP BY  OrderDate;
 
 --10--
 SELECT round(AVG(DATEDIFF(ShippedDate, OrderDate))) as 'delai moyen de livraison en jours' 

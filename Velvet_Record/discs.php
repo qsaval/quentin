@@ -24,9 +24,9 @@
         <h1>Liste des disque (<?php echo count($tableau) ?>)</h1>
         <a href="disc_new.php"><button type="button" class="btn btn-primary">Ajouter</button></a>
     </header>
-    <div class="d-inline p-2 " >    
+    <div class="d-flex flex-wrap justify-content-evenly col-8 pt-4" >    
         <?php foreach ($tableau as $disc): ?>
-            <div class="d-flex ">
+            <div class="d-flex disc ps-5">
                 <div class="d-inline p-2" >
                     <img src="jaquettes/<?= $disc->disc_picture ?>" alt="<?= $disc->disc_title?>">
                 </div>

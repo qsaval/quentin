@@ -20,42 +20,42 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Velvet Record</title>
         <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     </head>
     <body>
         <h1>Details</h1>
         <div class="d-flex align-items-center">
-            <div class="ps-3">
+            <div class="px-3 element">
                 <p>Title:</p> 
-                <p class="shadow-none p-3 bg-secondary rounded bg-opacity-25"><?php echo $disc->disc_title ?></p>
+                <p class="shadow-none p-3 bg-secondary rounded bg-opacity-25 "><?php echo $disc->disc_title ?></p>
             </div>
-            <div class="ps-3">
+            <div class="px-3 element">
                 <p>Artiste:</p>
                 <p class="shadow-none p-3 bg-secondary rounded bg-opacity-25"> <?= $disc->artist_name ?></p>
             </div>   
         </div>
         <div class="d-flex align-items-center">
-            <div class="ps-3">
+            <div class="px-3 element">
                 <p>Year:</p>
                 <p class="shadow-none p-3 bg-secondary rounded bg-opacity-25"><?= $disc->disc_year ?></p>
             </div>  
-            <div class="ps-3">
+            <div class="px-3 element">
                 <p>Genre:</p>
                 <p class="shadow-none p-3 bg-secondary rounded bg-opacity-25"><?= $disc->disc_genre ?></p>
             </div>   
         </div>
         <div class="d-flex align-items-center">
-            <div class="ps-3">
+            <div class="px-3 element">
                 <p>Label:</p>
                 <p class="shadow-none p-3 bg-secondary rounded bg-opacity-25"><?= $disc->disc_label ?></p>
             </div>  
-            <div class="ps-3">
+            <div class="px-3 element">
                 <p>Price:</p> 
                 <p class="shadow-none p-3 bg-secondary rounded bg-opacity-25"><?= $disc->disc_price ?></p>
             </div>   
         </div>
         <p class="ps-3">Picture</p>
-        <img src="jaquettes/<?= $disc->disc_picture?>" alt="<?= $disc->disc_title?>" class="ps-3"><br><br>
+        <img src="jaquettes/<?= $disc->disc_picture?>" alt="<?= $disc->disc_title?>" class="ps-3 disc1"><br><br>
 
         <a href="disc_form.php?id=<?= $disc->disc_id ?>" class="btn btn-primary"> Modifier </a>
         <a href="script_disc_delete.php?id=<?= $disc->disc_id ?>" class="btn btn-primary confirmation"> Supprimer </a>

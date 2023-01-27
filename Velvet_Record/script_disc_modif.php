@@ -52,7 +52,12 @@
         $image = $_POST['image'];
     }
     else {
-        $image = Null;
+        if (isset($_POST['disc']) && $_POST['disc'] != "") {
+            $image = $_POST['disc'];
+        }
+        else {
+            $image = Null;
+        }
     }
 
 

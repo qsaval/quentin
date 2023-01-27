@@ -66,7 +66,8 @@
             <br><br>
 
             <label for="image" class="form-label">Picture</label><br>
-            <input type="file" name="image"><br> 
+            <input type="file" name="image">
+            <input type="hidden" name="disc" value="<?= $disc->disc_picture ?>"><br>  
             <img src="jaquettes/<?= $disc->disc_picture ?>" alt="<?= $disc->disc_title ?>">
             <br><br>
 

@@ -23,7 +23,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     </head>
     <body>
-        <h1 class="ps-2 pt-2">Details</h1><br>
+        <h1 class="ps-2 pt-2">Détails</h1><br>
         <div class="d-flex align-items-center">
             <div class="px-3 element">
                 <p>Title:</p> 
@@ -54,7 +54,7 @@
                 <p class="shadow-none p-3 bg-secondary rounded bg-opacity-25"><?= $disc->disc_price ?></p>
             </div>   
         </div>
-        <p class="ps-3">Picture</p>
+        <br><p class="ps-3">Picture</p>
         <img src="jaquettes/<?= $disc->disc_picture?>" alt="<?= $disc->disc_title?>" class="ps-3 disc1"><br><br>
         <div class="ps-3 pb-3">
             <a href="disc_form.php?id=<?= $disc->disc_id ?>" class="btn btn-primary"> Modifier </a>

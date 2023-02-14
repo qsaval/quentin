@@ -1,12 +1,8 @@
 <?php
+// accès aux données
+$bdd = new PDO("mysql:host=localhost;dbname=billet;charset=utf8",'saval','1234');
+$billets  = $bdd->query('SELECT BIL_ID as id, BIL_DATE as date, BIL_TITRE as titre, BIL_CONTENU as contenu FROM T_BILLET order by BIL_ID desc');
 
-include 'Modele.php';
 
-try {
-  $billets = getBillets();
-  require 'vueAccueil.php';
-}
-catch (Exception $e) {
-  $msgErreur = $e->getMessage();
-  require 'vueErreur.php';
-}
+// affichage
+require 'vueAccueil.php';

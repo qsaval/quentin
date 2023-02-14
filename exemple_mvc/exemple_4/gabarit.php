@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="fr">
 <head>
@@ -12,29 +11,17 @@
 <body>
 <div id="global">
     <header>
-        <a href="index.php"><h1 id="titreBlog">Mon Blog</h1></a>
+        <a href="index.php">
+            <h1 id="titreBlog">Mon BLog</h1>
+        </a>
         <p>Hello et bienvenue !!!!</p>
     </header>
     <div id="contenu">
-        <?php foreach($billets as $billet): ?>
-        <article>
-            <header>
-                <h1 class="titreBillet">
-                    <?= $billet['titre']?>
-                </h1>
-                <time><?= $billet['date']?></time>
-            </header>
-            <p><?= $billet['contenu']?></p>
-        </article>
-        <hr>
-
-        <?php endforeach; ?>
+        <?= $contenu; ?>
     </div>
     <footer id="piedBlog">
         Blog exercice
     </footer>
 </div>
-
-
 </body>
 </html>

@@ -11,27 +11,18 @@ class Employe{
     public $age_enfant;
 
     public function Anciennete(){
-        $format =strtotime($this->$Date_embauche);
+        $format =strtotime($this->Date_embauche);
         $date3 = date('Y', $format);
         $date2 = date("Y");
         $inter = $date2 - $date3;
 
-        echo $format . "<br>" . $date3 . "<br>" . $date2 . "<br>";
-
-        echo "vous avait " . $inter . " ans anciennete";
+        echo "vous avait " . $inter . " ans anciennete <br>";
+        return $inter;
 
     }
 
-    //ok
     public function Prime(){
-        $date = $this->$Date_embauche;
-        $format =strtotime($date);
-        $date3 = date('Y', $format);
-        $date2 = date("Y");
-        $anc = $date2 - $date3;
-
-
-        // $anc = Anciennete();
+        $anc = $this->Anciennete();
 
         if(date("d/m") == "30/11"){
             $prime1 = $this->Salaire * 1.05;
@@ -46,15 +37,8 @@ class Employe{
         echo "votre prime sera calculer dans les prochains jour";
     }
 
-    //ok
     public function cheque_vacance(){
-        $date = $this->$Date_embauche;
-        $format =strtotime($date);
-        $date3 = date('Y', $format);
-        $date2 = date("Y");
-        $anc = $date2 - $date3;
-
-        // $anc = $this->Anciennete($this->Date_embauche);
+        $anc = $this->Anciennete();
 
         if($anc >= 1){
             echo "vous avait droit au cheque vacance";
@@ -65,7 +49,6 @@ class Employe{
         
     }
 
-    //ok
     public function cheque_noel(){
         $i=0;
         $a=0;

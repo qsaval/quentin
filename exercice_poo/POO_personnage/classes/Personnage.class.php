@@ -8,13 +8,13 @@ class Personnage{
     public function setNom($nom){
         $this->nom = $nom;
 
-        echo $this->nom . "<br>";
+        return $this->nom;
     }
 
     public function setPrenom($prenom){
         $this->prenom = $prenom;
         
-        echo $this->prenom;
+        return $this->prenom;
     }
 
 }

@@ -1,5 +1,4 @@
 <?php
-include "classes/Magasin.class.php";  
 class Employe{
     public $Nom;
     public $Prenom;
@@ -12,17 +11,27 @@ class Employe{
     public $age_enfant;
 
     public function Anciennete(){
-        $date = new DateTime($this->$Date_embauche);
-        $date1 = new DateTime(date("d/m/Y"));
-        $inter = $date->diff($date1);
+        $format =strtotime($this->$Date_embauche);
+        $date3 = date('Y', $format);
+        $date2 = date("Y");
+        $inter = $date2 - $date3;
 
-        echo "vous avait " . $inter . "ans d'anciennete";
-    
-        return $inter;
+        echo $format . "<br>" . $date3 . "<br>" . $date2 . "<br>";
+
+        echo "vous avait " . $inter . " ans anciennete";
+
     }
 
+    //ok
     public function Prime(){
-        $anc = Anciennete($this->Date_embauche);
+        $date = $this->$Date_embauche;
+        $format =strtotime($date);
+        $date3 = date('Y', $format);
+        $date2 = date("Y");
+        $anc = $date2 - $date3;
+
+
+        // $anc = Anciennete();
 
         if(date("d/m") == "30/11"){
             $prime1 = $this->Salaire * 1.05;
@@ -37,16 +46,15 @@ class Employe{
         echo "votre prime sera calculer dans les prochains jour";
     }
 
-    public function magasin(){
-        $mag = new Magasin();
-
-        $m =$mag->e_magasin();
-
-        $this->Magasin = $m; 
-    }
-
+    //ok
     public function cheque_vacance(){
-        $anc = Anciennete($this->Date_embauche);
+        $date = $this->$Date_embauche;
+        $format =strtotime($date);
+        $date3 = date('Y', $format);
+        $date2 = date("Y");
+        $anc = $date2 - $date3;
+
+        // $anc = $this->Anciennete($this->Date_embauche);
 
         if($anc >= 1){
             echo "vous avait droit au cheque vacance";
@@ -57,12 +65,13 @@ class Employe{
         
     }
 
+    //ok
     public function cheque_noel(){
         $i=0;
         $a=0;
         $b=0;
         $c=0;
-        while($this->nbr_enfant >= $i){
+        while($this->nbr_enfant-1 >= $i){
             
             if($this->age_enfant[$i] >= 0 && $this->age_enfant[$i] <= 10){
                 $a = $a + 1;
@@ -77,11 +86,11 @@ class Employe{
             $i+=1;
         }
         if($a != 0){
-            echo "pour la fin d'annee vous aurait " . $a . " cheque de 20 €";
+            echo "pour la fin d'annee vous aurait " . $a . " cheque de 20 € <br>";
         }
 
         if($b != 0){
-            echo "pour la fin d'annee vous aurait " . $b . " cheque de 30 €";
+            echo "pour la fin d'annee vous aurait " . $b . " cheque de 30 € <br>";
         }
 
         if($c != 0){

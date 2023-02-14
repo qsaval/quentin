@@ -11,7 +11,7 @@ class Employe{
     public $age_enfant;
 
     public function Anciennete(){
-        $format =strtotime($this->Date_embauche);
+        $format = strtotime($this->Date_embauche);
         $date3 = date('Y', $format);
         $date2 = date("Y");
         $inter = $date2 - $date3;
@@ -31,7 +31,7 @@ class Employe{
 
             $prime = $prime1 + $prime2;
 
-            echo "votre prime de " . $prime . "€ sra vaiser le 30/11 sur votre compte en banque";
+            echo "votre prime de " . $prime . " € sera vaiser le 30/11 sur votre compte en banque";
         }
 
         echo "votre prime sera calculer dans les prochains jour";

@@ -2,7 +2,8 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <title>Mon blog</title>
@@ -15,8 +16,7 @@
     </header>
     <div id="contenu">
         <?php
-        include "db.php";
-        $bdd = ConnexionBase();
+        $bdd = new PDO("mysql:host=localhost;dbname=billet;charset=utf8",'saval','1234');
         $billets  = $bdd->query('SELECT BIL_ID as id, BIL_DATE as date, BIL_TITRE as titre, BIL_CONTENU as contenu FROM T_BILLET order by BIL_ID desc');
         foreach($billets as $billet): ?>
             <article>
@@ -36,5 +36,7 @@
         Blog exercice
     </footer>
 </div>
+
+
 </body>
 </html>

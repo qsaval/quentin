@@ -8,6 +8,9 @@
             <img src="{{ article.image }}" alt="{{ article.title }}">
             {{ article.content | raw }}
         </div>
+        {% if is_granted('ROLE_ADMIN') %}
+        <a href="{{path('blog_edit', {'id': article.id})}}" class="btn btn-success">Modifier</a>
+        {% endif %}
     </article>
 
     <section id="commentaires">
@@ -28,8 +31,8 @@
         {% if app.user %}
         <h2>Vorte commentaire</h2>
         {{ form_start(commentForm) }}
-            {{ form_row(commentForm.author, {'attr': {'placeholder': "Votre nom"}}) }}
-            {{ form_row(commentForm.content, {'attr': {'placeholder': "Votre commentraire"}}) }}
+            {{ form_row(commentForm.author, {'label': 'Nom d\'auteur', 'attr': {'placeholder': "Votre nom"}}) }}
+            {{ form_row(commentForm.content, {'label': 'Contenu', 'attr': {'placeholder': "Votre commentraire"}}) }}
 
             <button type="submit" class="btn btn-success">Commenter</button>
         {{ form_end(commentForm) }}

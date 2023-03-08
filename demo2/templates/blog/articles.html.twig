@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container">
+    <h1>liste des article</h1>
+
+    {% for article in articles %}
+    <article>
+        <h2>{{ article.nom }}</h2>
+        <div class="metadata">Ecrit le {{ article.date | date('d/m/Y') }} à {{ article.date | date('h:i') }}</div>
+        <div class="content">
+            <img src="{{ article.image }}" alt=""><br>
+            {{ article.resume | raw }}<br>
+            <a href="{{ path('article', {'id': article.id}) }}" class="btn btn-dark">lire la suite</a>
+        </div>
+    </article>
+    {% endfor %}
+</div>
+
+{% endblock %}

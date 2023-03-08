@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container">
+    <h1>Nouveau article</h1>
+    {{ form_start(formArticle) }}
+    {{ form_row(formArticle.nom) }}
+    {{ form_row(formArticle.resume) }}
+    {{ form_row(formArticle.contenue) }}
+    {{ form_row(formArticle.image) }}
+    <button type="submit" class="btn btn-dark">Ajout un l'article</button>
+    {{ form_end(formArticle) }}
+</div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<article class="container">
+    <h1>{{ article.nom }}</h1>
+    <div class="metadata">Ecrit le {{ article.date | date('d/m/Y') }} à {{ article.date | date('h:i') }}</div>
+    <div class="content">
+        <img src="{{ article.image }}" alt=""><br>
+        {{ article.contenue | raw }}<br>
+    </div>
+</article>
+{% endblock %} 
